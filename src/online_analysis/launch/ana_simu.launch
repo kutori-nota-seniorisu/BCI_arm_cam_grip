@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="online_analysis" name="pub_packet"  type="chatpub.py" output="screen" />
+    <node pkg="online_analysis" name="analysis" type="onlineanalysis.py" output="screen" />
+    <!--node pkg="bci_grip" name="col_align_dep" type="col_align_dep"/-->
+</launch>

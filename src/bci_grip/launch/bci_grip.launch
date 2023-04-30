@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="bci_grip" name="col_align_depth" type="col_align_depth" output="screen" />
+</launch>
