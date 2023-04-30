@@ -1,0 +1,8 @@
+prefix=/home/sd/catkin_ws/devel
+
+Name: bci_grip
+Description: Description of bci_grip
+Version: 0.0.0
+Cflags: -I/home/sd/catkin_ws/src/bci_grip/include -I/usr/include/eigen3
+Libs: -L${prefix}/lib 
+Requires: gazebo_plugins gazebo_ros gazebo_ros_control roscpp rospy rviz std_msgs urdf xacro std_msgs message_runtime

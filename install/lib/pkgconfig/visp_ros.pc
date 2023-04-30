@@ -1,0 +1,8 @@
+prefix=/home/sd/catkin_ws/install
+
+Name: visp_ros
+Description: Description of visp_ros
+Version: 1.0.0
+Cflags: -I${prefix}/include -I/opt/ros/melodic/include -I/usr/include -I/usr/include/opencv -I/usr/include/eigen3 -I/usr/include/libxml2 -I/usr/include/OGRE -I/usr/include/ois
+Libs: -L${prefix}/lib -lvisp_ros -lvisp_ros_bebop2_visual_servo_nodelet /opt/ros/melodic/lib/libvisp_vs.so.3.5.0 /opt/ros/melodic/lib/libvisp_visual_features.so.3.5.0 /opt/ros/melodic/lib/libvisp_vision.so.3.5.0 /opt/ros/melodic/lib/libvisp_tt_mi.so.3.5.0 /opt/ros/melodic/lib/libvisp_tt.so.3.5.0 /opt/ros/melodic/lib/libvisp_me.so.3.5.0 /opt/ros/melodic/lib/libvisp_mbt.so.3.5.0 /opt/ros/melodic/lib/libvisp_klt.so.3.5.0 /opt/ros/melodic/lib/libvisp_blob.so.3.5.0 /opt/ros/melodic/lib/libvisp_sensor.so.3.5.0 /opt/ros/melodic/lib/libvisp_robot.so.3.5.0 /opt/ros/melodic/lib/libvisp_io.so.3.5.0 /opt/ros/melodic/lib/libvisp_imgproc.so.3.5.0 /opt/ros/melodic/lib/libvisp_gui.so.3.5.0 /opt/ros/melodic/lib/libvisp_detection.so.3.5.0 /opt/ros/melodic/lib/libvisp_core.so.3.5.0 /opt/ros/melodic/lib/libvisp_ar.so.3.5.0
+Requires: cv_bridge geometry_msgs image_geometry message_runtime nodelet roscpp sensor_msgs std_msgs tf visp_bridge
