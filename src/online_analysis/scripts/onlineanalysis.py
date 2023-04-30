@@ -6,6 +6,7 @@ from scipy import signal
 from sklearn.cross_decomposition import CCA
 import basic_filterbank
 import sincos_ref
+import find
 from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
 from std_msgs.msg import Float32MultiArray
@@ -22,9 +23,9 @@ packetSize = 512
 # 分析间隔：0.5s
 anaInter = 0.5
 # 分类结果阈值
-r_threshold = 0.8
+r_threshold = 0.6
 # 选用分析方法，method = 1:CCA，method = 2:FBCCA
-method = 1
+method = 2
 
 # 参数：降采样
 downSamplingNum = 8
@@ -71,10 +72,8 @@ camera_on = False
 # 用于分析的数据数组
 data_used = np.array([])
 
-# 用于记录已经分析的结果
-pre_res = 0
-# 用于记录结果相同的次数
-eq_cnt = 0
+# 用于存储分析结果
+res_arr = np.zeros(4)
 
 # 获取采样频率
 def callback_get_rate(rate):
@@ -88,7 +87,7 @@ def callback_get_packet(data):
 	rawdata = np.array(data.data[:]).reshape(35, 512)
 	# 判断，是进行初始化，还是将数据拼接
 	global data_used, camera_on
-	global pre_res, eq_cnt
+	global res_arr
 	if data_used.size == 0:
 		data_used = rawdata
 	else:
@@ -101,7 +100,7 @@ def callback_get_packet(data):
 	
 	if data_used.shape[1] == BUFFSIZE:
 		print("analysis start")
-		print('data used samples', data_used.shape[1])
+		# print('data used samples', data_used.shape[1])
 		# 当数组长度超过缓存长度，则进行处理
 		# 选择导联
 		ch_used = [20, 24, 25, 26, 27, 28, 29, 30, 31]
@@ -176,51 +175,52 @@ def callback_get_packet(data):
 				result = 0
 		print('the result is', result)
 
-		if result == pre_res:
-			eq_cnt = eq_cnt + 1
-		else:
-			eq_cnt = 0
-		pre_res = result
-		
-		if eq_cnt == 4:
-			print("the result is", result, ", the result is accurate!")
-
 		result_pub = rospy.Publisher("/ResultNode", UInt16, queue_size=10)
 		state_result_pub = rospy.Publisher("/StateResultNode", Bool, queue_size=10)
 		camera_on_pub = rospy.Publisher("/PicSubSig", Bool, queue_size=10)
 
-		if result == 19:
+		# 四次中三次相同
+		res_arr = np.append(res_arr, result)[1:]
+		real_res = find.find(res_arr)
+		if real_res == 0:
+			print("fewer than len-1!!")
+		else:
+			print("we find the right result!")
+
+		if real_res == 20:
 			# do something
-			print("the frequency to start camera is", result)
+			print("the frequency to start camera is", real_res)
 			camera_state = Bool()
 			camera_on = True
 			camera_state.data = camera_on
 			state_result_pub.publish(camera_state)
 			camera_on_pub.publish(camera_state)
-		# if camera_on == True:
-		# 	if result == 9:
-		# 		print(9)
-		# 	elif result == 10:
-		# 		print(10)
-		# 	elif result == 11:
-		# 		print(11)
-		# 	elif result == 12:
-		# 		print(12)
-		# 	elif result == 13:
-		# 		print(13)
-		# 	elif result == 14:
-		# 		print(14)
-		# 	elif result == 15:
-		# 		print(15)
-		# 	elif result == 16:
-		# 		print(16)
-		# 	elif result == 17:
-		# 		print(17)
-		# 	else:
-		# 		print("no")
-		# 	res_pub = UInt16()
-		# 	res_pub.data = result
-		# 	result_pub.publish(res_pub)
+		if camera_on == True:
+			if real_res == 9:
+				print(9)
+			elif real_res == 10:
+				print(10)
+			elif real_res == 11:
+				print(11)
+			elif real_res == 12:
+				print(12)
+			elif real_res == 13:
+				print(13)
+			elif real_res == 14:
+				print(14)
+			elif real_res == 15:
+				print(15)
+			elif real_res == 16:
+				print(16)
+			elif real_res == 17:
+				print(17)
+			else:
+				print(19, "nothing happened!")
+			res_pub = UInt16()
+			res_pub.data = real_res
+			result_pub.publish(res_pub)
+
+		print("analysis finish\n")
 
 def listener():
     # In ROS, nodes are uniquely named. If two nodes with the same
