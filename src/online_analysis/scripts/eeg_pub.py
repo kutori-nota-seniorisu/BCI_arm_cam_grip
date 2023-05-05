@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 import rospy
 import numpy as np
+import matplotlib.pyplot as plt
 import scipy.io as scio
 from std_msgs.msg import String
 from std_msgs.msg import Float32MultiArray
@@ -19,6 +20,9 @@ print("I read finish")
 t = np.array([(i * 1.0) / 2048 for i in range(0, 122880)])
 sin30ref = np.sin(2 * np.pi * 19 * t)
 sin30ref = np.tile(sin30ref, (35, 1))
+
+# 生成高斯噪声
+gauss_noise = np.random.normal(0, 1, (35, 122880))
 
 # 记录按键输入
 target = 0
@@ -38,8 +42,8 @@ def talker():
         if target == 0:
             if (packet_i + 1) * packetSize >= eegdata.shape[1]:
                 packet_i = 0
-            # packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target+8] 
-            packet = sin30ref[:, packet_i * packetSize : (packet_i + 1) * packetSize]
+            # packet = sin30ref[:, packet_i * packetSize : (packet_i + 1) * packetSize]
+            packet = gauss_noise[:, packet_i * packetSize : (packet_i + 1) * packetSize]
         elif target > 0 and target < 10:
             packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target - 1]
         packet_pub.data = packet.reshape(35 * 512)

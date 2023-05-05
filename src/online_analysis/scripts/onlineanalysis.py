@@ -25,7 +25,7 @@ anaInter = 0.5
 # 分类结果阈值
 r_threshold = 0.6
 # 选用分析方法，method = 1:CCA，method = 2:FBCCA
-method = 2
+method = 1
 
 # 参数：降采样
 downSamplingNum = 8
@@ -134,8 +134,17 @@ def callback_get_packet(data):
 				cca.fit(data_bandpass.T, refdata_cca)
 				U, V = cca.transform(data_bandpass.T, refdata_cca)
 				r_cca[class_i] = np.corrcoef(U[:, 0], V[:, 0])[0, 1]
+			print("CCA:", r_cca)
+
+			i_rcca = np.argsort(r_cca)
+			d = r_cca[i_rcca[-1]] - r_cca[i_rcca[-2]]
+			print("差值：", d)
+			if d > 0.1:
+				print("本次分类有效")
+			else:
+				print("本次分类无效")
+
 			m_rcca = np.max(r_cca)
-			print("rcca:", r_cca)
 			if m_rcca > r_threshold:
 				# 获取相关系数值最大的序号
 				index_class_cca = np.argmax(r_cca)
@@ -162,6 +171,13 @@ def callback_get_packet(data):
 					eigenvalue_r_fbcca[fb_i, class_i] = np.corrcoef(U[:, 0], V[:, 0])[0, 1]
 			# 计算加权后的相关系数
 			r_fbcca = fb_coefs @ (eigenvalue_r_fbcca ** 2)
+			print("FBCCA:", r_fbcca)
+			r_fbcca_S = r_fbcca / np.sum(r_fbcca)
+			print("Sum R:", r_fbcca_S)
+			r_fbcca_E = np.exp(r_fbcca) / np.sum(np.exp(r_fbcca))
+			print("Exp R:", r_fbcca_E)
+			r_fbcca_2E = np.exp(2 * r_fbcca) / np.sum(np.exp(2 * r_fbcca))
+			print("2 Exp R:", r_fbcca_2E)
 			# print("rfbcca:", r_fbcca)
 			# r_fbcca_sum = np.sum(r_fbcca)
 			# r_fbcca_normal = r_fbcca / r_fbcca_sum
@@ -183,9 +199,9 @@ def callback_get_packet(data):
 		res_arr = np.append(res_arr, result)[1:]
 		real_res = find.find(res_arr)
 		if real_res == 0:
-			print("fewer than len-1!!")
+			print("本次未分析出结果！！")
 		else:
-			print("we find the right result!")
+			print("分析成功！！")
 
 		if real_res == 20:
 			# do something
