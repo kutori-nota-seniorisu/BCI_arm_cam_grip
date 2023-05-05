@@ -141,16 +141,19 @@ def callback_get_packet(data):
 			print("差值：", d)
 			if d > 0.1:
 				print("本次分类有效")
+				# 获取相关系数最大的索引并查找对应频率
+				# 将查找到的频率添加到结果数组中
+				# 四次中三次相同则可确定
 			else:
 				print("本次分类无效")
+				# 跳过下面所有环节
 
-			m_rcca = np.max(r_cca)
-			if m_rcca > r_threshold:
-				# 获取相关系数值最大的序号
-				index_class_cca = np.argmax(r_cca)
-				result = freqList[index_class_cca]
-			else:
-				result = 0
+			# m_rcca = np.max(r_cca)
+			# if m_rcca > r_threshold:
+			# 	index_class_cca = np.argmax(r_cca)
+			# 	result = freqList[index_class_cca]
+			# else:
+			# 	result = 0
 
 		elif method == 2:
 			# FBCCA
@@ -183,12 +186,12 @@ def callback_get_packet(data):
 			# r_fbcca_normal = r_fbcca / r_fbcca_sum
 			# print("r_fbcca_normal:", r_fbcca_normal)
 
-			m_rfbcca = np.max(r_fbcca)
-			if m_rfbcca > r_threshold:
-				index_class_cca = np.argmax(r_fbcca)
-				result = freqList[index_class_cca]
-			else:
-				result = 0
+			# m_rfbcca = np.max(r_fbcca)
+			# if m_rfbcca > r_threshold:
+			# 	index_class_cca = np.argmax(r_fbcca)
+			# 	result = freqList[index_class_cca]
+			# else:
+			# 	result = 0
 		print('the result is', result)
 
 		result_pub = rospy.Publisher("/ResultNode", UInt16, queue_size=10)
