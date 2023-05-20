@@ -45,6 +45,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ni"
   "/usr/include/openni2"
   "/usr/include/opencv"
+  "/home/sd/code/catkin_ws/src/hrc/include"
   )
 
 # Targets to which this target links.

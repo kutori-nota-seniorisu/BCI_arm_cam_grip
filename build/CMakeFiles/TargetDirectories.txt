@@ -159,13 +159,6 @@
 /home/sd/catkin_ws/build/vision_visp/vision_visp/CMakeFiles/install/local.dir
 /home/sd/catkin_ws/build/vision_visp/vision_visp/CMakeFiles/rebuild_cache.dir
 /home/sd/catkin_ws/build/vision_visp/vision_visp/CMakeFiles/install.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/install/strip.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/edit_cache.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/list_install_components.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/test.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/install/local.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/rebuild_cache.dir
-/home/sd/catkin_ws/build/key_read/CMakeFiles/install.dir
 /home/sd/catkin_ws/build/online_analysis/CMakeFiles/install/strip.dir
 /home/sd/catkin_ws/build/online_analysis/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/sd/catkin_ws/build/online_analysis/CMakeFiles/roscpp_generate_messages_eus.dir
@@ -661,6 +654,8 @@
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/install/strip.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/rebuild_cache.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/edit_cache.dir
+/home/sd/catkin_ws/build/bci_grip/CMakeFiles/bci_ur_actual.dir
+/home/sd/catkin_ws/build/bci_grip/CMakeFiles/ur5_test_go_home_up.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/test.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/node_pic_cpp2.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/col_align_dep.dir
@@ -670,6 +665,7 @@
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/pcl_msgs_generate_messages_cpp.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/graph_msgs_generate_messages_py.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/control_toolbox_generate_messages_lisp.dir
+/home/sd/catkin_ws/build/bci_grip/CMakeFiles/test_position.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/graph_msgs_generate_messages_nodejs.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/bci_grip_gennodejs.dir
 /home/sd/catkin_ws/build/bci_grip/CMakeFiles/install.dir

@@ -22,7 +22,7 @@ using namespace cv;
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "col_align_dep");
-    // ros::NodeHandle n;
+    ros::NodeHandle n;
     cout<<"hh"<<endl;
     //需要将深度图和彩色图同步
     /*//depth_sub = n.subscribe<sensor_msgs::Image>("/camera/aligned_depth_to_color/image_raw", 10, DepthCallback);

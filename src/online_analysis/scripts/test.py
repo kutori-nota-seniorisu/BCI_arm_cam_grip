@@ -1,4 +1,6 @@
 import numpy as np
-a = np.array([5,6,7,1,3,4])
-b = np.argsort(a)
-print(b)
+a = np.array([1,2,3,4,5,6])
+print(a)
+
+c = a.reshape((3,2))
+print(c)

@@ -5017,6 +5017,32 @@ visp_auto_tracker/fast:
 .PHONY : visp_auto_tracker/fast
 
 #=============================================================================
+# Target rules for targets named bci_ur_actual
+
+# Build rule for target.
+bci_ur_actual: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bci_ur_actual
+.PHONY : bci_ur_actual
+
+# fast build rule for target.
+bci_ur_actual/fast:
+	$(MAKE) -f bci_grip/CMakeFiles/bci_ur_actual.dir/build.make bci_grip/CMakeFiles/bci_ur_actual.dir/build
+.PHONY : bci_ur_actual/fast
+
+#=============================================================================
+# Target rules for targets named ur5_test_go_home_up
+
+# Build rule for target.
+ur5_test_go_home_up: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ur5_test_go_home_up
+.PHONY : ur5_test_go_home_up
+
+# fast build rule for target.
+ur5_test_go_home_up/fast:
+	$(MAKE) -f bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build.make bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build
+.PHONY : ur5_test_go_home_up/fast
+
+#=============================================================================
 # Target rules for targets named node_pic_cpp2
 
 # Build rule for target.
@@ -5119,6 +5145,19 @@ control_toolbox_generate_messages_lisp: cmake_check_build_system
 control_toolbox_generate_messages_lisp/fast:
 	$(MAKE) -f bci_grip/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build.make bci_grip/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build
 .PHONY : control_toolbox_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named test_position
+
+# Build rule for target.
+test_position: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_position
+.PHONY : test_position
+
+# fast build rule for target.
+test_position/fast:
+	$(MAKE) -f bci_grip/CMakeFiles/test_position.dir/build.make bci_grip/CMakeFiles/test_position.dir/build
+.PHONY : test_position/fast
 
 #=============================================================================
 # Target rules for targets named graph_msgs_generate_messages_nodejs
@@ -6494,6 +6533,8 @@ help:
 	@echo "... visp_auto_tracker_cmd_line"
 	@echo "... visp_auto_tracker_bag"
 	@echo "... visp_auto_tracker"
+	@echo "... bci_ur_actual"
+	@echo "... ur5_test_go_home_up"
 	@echo "... node_pic_cpp2"
 	@echo "... col_align_dep"
 	@echo "... bci_ur5"
@@ -6502,6 +6543,7 @@ help:
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... graph_msgs_generate_messages_py"
 	@echo "... control_toolbox_generate_messages_lisp"
+	@echo "... test_position"
 	@echo "... graph_msgs_generate_messages_nodejs"
 	@echo "... bci_grip_gennodejs"
 	@echo "... graph_msgs_generate_messages_lisp"

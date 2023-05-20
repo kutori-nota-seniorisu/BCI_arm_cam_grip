@@ -168,6 +168,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+bci_grip/CMakeFiles/bci_ur_actual.dir/rule:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/bci_ur_actual.dir/rule
+.PHONY : bci_grip/CMakeFiles/bci_ur_actual.dir/rule
+
+# Convenience name for target.
+bci_ur_actual: bci_grip/CMakeFiles/bci_ur_actual.dir/rule
+
+.PHONY : bci_ur_actual
+
+# fast build rule for target.
+bci_ur_actual/fast:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/bci_ur_actual.dir/build.make bci_grip/CMakeFiles/bci_ur_actual.dir/build
+.PHONY : bci_ur_actual/fast
+
+# Convenience name for target.
+bci_grip/CMakeFiles/ur5_test_go_home_up.dir/rule:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/ur5_test_go_home_up.dir/rule
+.PHONY : bci_grip/CMakeFiles/ur5_test_go_home_up.dir/rule
+
+# Convenience name for target.
+ur5_test_go_home_up: bci_grip/CMakeFiles/ur5_test_go_home_up.dir/rule
+
+.PHONY : ur5_test_go_home_up
+
+# fast build rule for target.
+ur5_test_go_home_up/fast:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build.make bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build
+.PHONY : ur5_test_go_home_up/fast
+
+# Convenience name for target.
 bci_grip/CMakeFiles/node_pic_cpp2.dir/rule:
 	cd /home/sd/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/node_pic_cpp2.dir/rule
 .PHONY : bci_grip/CMakeFiles/node_pic_cpp2.dir/rule
@@ -286,6 +316,21 @@ control_toolbox_generate_messages_lisp: bci_grip/CMakeFiles/control_toolbox_gene
 control_toolbox_generate_messages_lisp/fast:
 	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build.make bci_grip/CMakeFiles/control_toolbox_generate_messages_lisp.dir/build
 .PHONY : control_toolbox_generate_messages_lisp/fast
+
+# Convenience name for target.
+bci_grip/CMakeFiles/test_position.dir/rule:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/test_position.dir/rule
+.PHONY : bci_grip/CMakeFiles/test_position.dir/rule
+
+# Convenience name for target.
+test_position: bci_grip/CMakeFiles/test_position.dir/rule
+
+.PHONY : test_position
+
+# fast build rule for target.
+test_position/fast:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/test_position.dir/build.make bci_grip/CMakeFiles/test_position.dir/build
+.PHONY : test_position/fast
 
 # Convenience name for target.
 bci_grip/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/rule:
@@ -824,6 +869,33 @@ src/bci_ur5.cpp.s:
 	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/bci_ur5.dir/build.make bci_grip/CMakeFiles/bci_ur5.dir/src/bci_ur5.cpp.s
 .PHONY : src/bci_ur5.cpp.s
 
+src/bci_ur_move.o: src/bci_ur_move.cpp.o
+
+.PHONY : src/bci_ur_move.o
+
+# target to build an object file
+src/bci_ur_move.cpp.o:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/bci_ur_actual.dir/build.make bci_grip/CMakeFiles/bci_ur_actual.dir/src/bci_ur_move.cpp.o
+.PHONY : src/bci_ur_move.cpp.o
+
+src/bci_ur_move.i: src/bci_ur_move.cpp.i
+
+.PHONY : src/bci_ur_move.i
+
+# target to preprocess a source file
+src/bci_ur_move.cpp.i:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/bci_ur_actual.dir/build.make bci_grip/CMakeFiles/bci_ur_actual.dir/src/bci_ur_move.cpp.i
+.PHONY : src/bci_ur_move.cpp.i
+
+src/bci_ur_move.s: src/bci_ur_move.cpp.s
+
+.PHONY : src/bci_ur_move.s
+
+# target to generate assembly for a file
+src/bci_ur_move.cpp.s:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/bci_ur_actual.dir/build.make bci_grip/CMakeFiles/bci_ur_actual.dir/src/bci_ur_move.cpp.s
+.PHONY : src/bci_ur_move.cpp.s
+
 src/col_align_dep.o: src/col_align_dep.cpp.o
 
 .PHONY : src/col_align_dep.o
@@ -850,6 +922,33 @@ src/col_align_dep.s: src/col_align_dep.cpp.s
 src/col_align_dep.cpp.s:
 	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/col_align_dep.dir/build.make bci_grip/CMakeFiles/col_align_dep.dir/src/col_align_dep.cpp.s
 .PHONY : src/col_align_dep.cpp.s
+
+src/go_home_up.o: src/go_home_up.cpp.o
+
+.PHONY : src/go_home_up.o
+
+# target to build an object file
+src/go_home_up.cpp.o:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build.make bci_grip/CMakeFiles/ur5_test_go_home_up.dir/src/go_home_up.cpp.o
+.PHONY : src/go_home_up.cpp.o
+
+src/go_home_up.i: src/go_home_up.cpp.i
+
+.PHONY : src/go_home_up.i
+
+# target to preprocess a source file
+src/go_home_up.cpp.i:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build.make bci_grip/CMakeFiles/ur5_test_go_home_up.dir/src/go_home_up.cpp.i
+.PHONY : src/go_home_up.cpp.i
+
+src/go_home_up.s: src/go_home_up.cpp.s
+
+.PHONY : src/go_home_up.s
+
+# target to generate assembly for a file
+src/go_home_up.cpp.s:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/ur5_test_go_home_up.dir/build.make bci_grip/CMakeFiles/ur5_test_go_home_up.dir/src/go_home_up.cpp.s
+.PHONY : src/go_home_up.cpp.s
 
 src/node_pic_cpp.o: src/node_pic_cpp.cpp.o
 
@@ -959,6 +1058,33 @@ src/subpicpubsig.cpp.s:
 	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/subpicpubsig.dir/build.make bci_grip/CMakeFiles/subpicpubsig.dir/src/subpicpubsig.cpp.s
 .PHONY : src/subpicpubsig.cpp.s
 
+src/test_position.o: src/test_position.cpp.o
+
+.PHONY : src/test_position.o
+
+# target to build an object file
+src/test_position.cpp.o:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/test_position.dir/build.make bci_grip/CMakeFiles/test_position.dir/src/test_position.cpp.o
+.PHONY : src/test_position.cpp.o
+
+src/test_position.i: src/test_position.cpp.i
+
+.PHONY : src/test_position.i
+
+# target to preprocess a source file
+src/test_position.cpp.i:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/test_position.dir/build.make bci_grip/CMakeFiles/test_position.dir/src/test_position.cpp.i
+.PHONY : src/test_position.cpp.i
+
+src/test_position.s: src/test_position.cpp.s
+
+.PHONY : src/test_position.s
+
+# target to generate assembly for a file
+src/test_position.cpp.s:
+	cd /home/sd/catkin_ws/build && $(MAKE) -f bci_grip/CMakeFiles/test_position.dir/build.make bci_grip/CMakeFiles/test_position.dir/src/test_position.cpp.s
+.PHONY : src/test_position.cpp.s
+
 src/transC.o: src/transC.cpp.o
 
 .PHONY : src/transC.o
@@ -995,6 +1121,8 @@ help:
 	@echo "... install/strip"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... bci_ur_actual"
+	@echo "... ur5_test_go_home_up"
 	@echo "... test"
 	@echo "... node_pic_cpp2"
 	@echo "... col_align_dep"
@@ -1004,6 +1132,7 @@ help:
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... graph_msgs_generate_messages_py"
 	@echo "... control_toolbox_generate_messages_lisp"
+	@echo "... test_position"
 	@echo "... graph_msgs_generate_messages_nodejs"
 	@echo "... bci_grip_gennodejs"
 	@echo "... install"
@@ -1044,9 +1173,15 @@ help:
 	@echo "... src/bci_ur5.o"
 	@echo "... src/bci_ur5.i"
 	@echo "... src/bci_ur5.s"
+	@echo "... src/bci_ur_move.o"
+	@echo "... src/bci_ur_move.i"
+	@echo "... src/bci_ur_move.s"
 	@echo "... src/col_align_dep.o"
 	@echo "... src/col_align_dep.i"
 	@echo "... src/col_align_dep.s"
+	@echo "... src/go_home_up.o"
+	@echo "... src/go_home_up.i"
+	@echo "... src/go_home_up.s"
 	@echo "... src/node_pic_cpp.o"
 	@echo "... src/node_pic_cpp.i"
 	@echo "... src/node_pic_cpp.s"
@@ -1059,6 +1194,9 @@ help:
 	@echo "... src/subpicpubsig.o"
 	@echo "... src/subpicpubsig.i"
 	@echo "... src/subpicpubsig.s"
+	@echo "... src/test_position.o"
+	@echo "... src/test_position.i"
+	@echo "... src/test_position.s"
 	@echo "... src/transC.o"
 	@echo "... src/transC.i"
 	@echo "... src/transC.s"

@@ -72,7 +72,9 @@
         "random": "cpp",
         "set": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
-    },
-    "ros.distro": "melodic"
+        "string_view": "cpp",
+        "geometry": "cpp",
+        "future": "cpp",
+        "codecvt": "cpp"
+    }
 }

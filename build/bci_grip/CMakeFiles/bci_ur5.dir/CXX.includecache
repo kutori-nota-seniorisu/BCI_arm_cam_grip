@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/sd/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/sd/catkin_ws/src/bci_grip/src/bci_ur5.cpp
 string
 -

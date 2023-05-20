@@ -45,6 +45,10 @@ vector
 -
 Eigen/Dense
 -
+ur_rtde/rtde_receive_interface.h
+-
+ur_rtde/rtde_control_interface.h
+-
 
 /home/sd/catkin_ws/src/bci_grip/src/subpicpubsig.cpp
 bci_grip/subpicpubsig.h

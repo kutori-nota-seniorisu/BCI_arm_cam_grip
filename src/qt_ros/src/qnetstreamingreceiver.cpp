@@ -736,21 +736,19 @@ namespace qt_ros
 		//	qDebug() << s;
 		Log(Commu, s);
 
-		/*
-		QString path = "/home/wuyou/out_raw.txt";
-		QFile file(path);
-		file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append);
-		QTextStream out(&file);
-		for (int i = 0; i < m_BasicInfo.nEegChan; ++i)
-		{
-			for (int j = 0; j < nNumSamples; ++j)
-			{
-				out << pfData[i * m_BasicInfo.nEegChan + j] << '\t';
-			}
-			out << '\n';
-		}
-		file.close();
-		*/
+//      QString path = "/home/sd/out_raw.txt";
+//		QFile file(path);
+//		file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append);
+//		QTextStream out(&file);
+//		for (int i = 0; i < m_BasicInfo.nEegChan; ++i)
+//		{
+//			for (int j = 0; j < nNumSamples; ++j)
+//			{
+//                out << pfData[j * m_BasicInfo.nEegChan + i] << '\t';
+//			}
+//			out << '\n';
+//		}
+//		file.close();
 
 		emit SendData(pfData, m_BasicInfo.nEegChan, nNumSamples);
 		return S_OK;
@@ -783,14 +781,8 @@ namespace qt_ros
 									   : fImp;
 			sTmp = QString::number(n + 1) + ": " + QString::number(re) + '\t';
 			s += sTmp;
-			//		sTmp.Format(L"%d: %.1f\t", n+1,   fImp < 0.0f	? 0.0f
-			//										: fImp > 250.0f	? 250.0f
-			//										: fImp);
-			//		s.Append(sTmp);
 		}
 		Log(Events, s);
-		//	AddLogLine(s,1);
-
 		return S_OK;
 	}
 

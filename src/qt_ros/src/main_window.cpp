@@ -60,36 +60,20 @@ namespace qt_ros
 		// 启动线程
 		connect(m_thread, SIGNAL(started()), m_qNetStreaming, SLOT(Run()));
         // 接收数据并绘制波形
-		connect(m_qNetStreaming, SIGNAL(SendData(float *, int, long)), this, SLOT(RecvAndDraw(float *, int, long)));
+//        connect(m_qNetStreaming, SIGNAL(SendData(float *, int, long)), this, SLOT(RecvAndDraw(float *, int, long)));
 		// 通过节点发送采样频率
         connect(m_qNetStreaming, SIGNAL(SendRate(int)), &qnode, SLOT(QNode_Pub_Rate(int)));
 		// 通过节点发送数据包
         connect(m_qNetStreaming, SIGNAL(SendData(float *, int, long)), &qnode, SLOT(QNode_Pub_Packet(float *, int, long)));
-		// 初始化线条数量
-		connect(m_qNetStreaming, SIGNAL(SendChan(int)), this, SLOT(InitLines(int)));
+        // 初始化线条数量
+//        connect(m_qNetStreaming, SIGNAL(SendChan(int)), this, SLOT(InitLines(int)));
 		// 消息框滚动
 		connect(m_qNetStreaming, SIGNAL(LoggingConfigUpdated()), this, SLOT(UpdateLogConfig()));
 		connect(m_qNetStreaming, SIGNAL(LoggingComUpdated()), this, SLOT(UpdateLogCom()));
 		connect(m_qNetStreaming, SIGNAL(LoggingEveUpdated()), this, SLOT(UpdateLogEve()));
 
-//      ui.gridLayout->setColumnStretch(0, 1);
-//      ui.gridLayout->setColumnStretch(1, 1);
-//		ui.gridLayout->setColumnStretch(2, 5);
-//		ui.gridLayout->setRowStretch(0, 1);
-//		ui.gridLayout->setRowStretch(1, 2);
-//		ui.gridLayout->setRowStretch(2, 3);
-//		ui.gridLayout->setRowStretch(3, 3);
         // 初始化画布
-		InitDraw();
-        // 初始化傅立叶变换的画布
-//        InitFFTDraw();
-        // 初始化单个波形的画布
-//        InitSingleDraw();
-
-        // 显示的时间长度
-        t_show = 10;
-        // 显示的最大数据量
-        maxSize = 2000;
+//        InitDraw();
 
         // 初始化滤波标志变量
 		notch_check = ui.checkBox_notch->isChecked();
@@ -176,185 +160,88 @@ namespace qt_ros
 		m_axisY->setGridLineVisible(false);
 	}
 
-    // 初始化傅立叶变换的画布
-//    void MainWindow::InitFFTDraw()
-//    {
-//        // 初始化坐标轴与画布，并将画布设置到widget上
-//        m_fft_axisX = new QValueAxis();
-//        m_fft_axisY = new QValueAxis();
-//        m_fft_chart = new QChart();
-//        ui.fft_chartwidget->setChart(m_fft_chart);
-
-//        m_fft_chart->setTitleBrush(QBrush(QColor(0, 0, 0))); // 设置标题Brush
-//        m_fft_chart->setTitleFont(QFont("微软雅黑"));		 // 设置标题字体
-//        m_fft_chart->setTitle("傅立叶");					 // 设置标题
-//        m_fft_chart->legend()->hide();						 //隐藏图例
-//        m_fft_chart->addAxis(m_fft_axisX, Qt::AlignBottom);		 //设置坐标轴位于chart中的位置
-//        m_fft_chart->addAxis(m_fft_axisY, Qt::AlignLeft);
-
-//        m_fft_axisX->setTitleText("x");
-//        m_fft_axisX->setRange(0, 1);
-//        m_fft_axisX->setGridLineVisible(false);
-
-//        m_fft_axisY->setTitleText("y");
-//        m_fft_axisY->setRange(0, 1);
-//        m_fft_axisY->setGridLineVisible(false);
-//    }
-
-    // 初始化单个波形的画布
-//    void MainWindow::InitSingleDraw()
-//    {
-//        // 初始化坐标轴与画布，并将画布设置到widget上
-//        m_single_axisX = new QValueAxis();
-//        m_single_axisY = new QValueAxis();
-//        m_single_chart = new QChart();
-//        ui.single_chartwidget->setChart(m_single_chart);
-
-//        m_single_chart->setTitleBrush(QBrush(QColor(0, 0, 0))); // 设置标题Brush
-//        m_single_chart->setTitleFont(QFont("微软雅黑"));		 // 设置标题字体
-//        m_single_chart->setTitle("单个通道波形");					 // 设置标题
-//        m_single_chart->legend()->hide();						 //隐藏图例
-//        m_single_chart->addAxis(m_single_axisX, Qt::AlignBottom);		 //设置坐标轴位于chart中的位置
-//        m_single_chart->addAxis(m_single_axisY, Qt::AlignLeft);
-
-//        m_single_axisX->setTitleText("x");
-//        m_single_axisX->setRange(0, 1);
-//        m_single_axisX->setGridLineVisible(false);
-
-//        m_single_axisY->setTitleText("y");
-//        m_single_axisY->setRange(0, 1);
-//        m_single_axisY->setGridLineVisible(false);
-//    }
-
     // 接收数据并绘制波形
-	void MainWindow::RecvAndDraw(float *pfData, int nEegChan, long nNumSamples)
-	{
-		// 存放数据
-		QVector<QVector<double>> packet(nEegChan, QVector<double>(nNumSamples));
-		// 基线校准，并计算最大最小值
-		float fSample;
-		QVector<float> aMin;
-		QVector<float> aMax;
-		QVector<float> aAvg;
+    void MainWindow::RecvAndDraw(float *pfData, int nEegChan, long nNumSamples)
+    {
+        // 存放数据
+        QVector<QVector<double>> packet(nEegChan, QVector<double>(nNumSamples));
+        // 基线校准，并计算最大最小值
+        float fSample;
+        QVector<float> aMin;
+        QVector<float> aMax;
+        QVector<float> aAvg;
 
-		aMin.resize(nEegChan);
-		aMax.resize(nEegChan);
-		aAvg.resize(nEegChan);
+        aMin.resize(nEegChan);
+        aMax.resize(nEegChan);
+        aAvg.resize(nEegChan);
 
         // 获取最大值、最小值、平均值
-		for (int i = 0; i < nEegChan; ++i)
-		{
-			aAvg[i] = 0.0f;
-			for (int j = 0; j < nNumSamples; ++j)
-			{
-				fSample = pfData[j * nEegChan + i];
-				if (j == 0)
-				{
-					aMin[i] = fSample;
-					aMax[i] = fSample;
-				}
-				else
-				{
-					if (fSample < aMin[i])
-						aMin[i] = fSample;
-					if (fSample > aMax[i])
-						aMax[i] = fSample;
-				}
+        for (int i = 0; i < nEegChan; ++i)
+        {
+            aAvg[i] = 0.0f;
+            for (int j = 0; j < nNumSamples; ++j)
+            {
+                fSample = pfData[j * nEegChan + i];
+                if (j == 0)
+                {
+                    aMin[i] = fSample;
+                    aMax[i] = fSample;
+                }
+                else
+                {
+                    if (fSample < aMin[i])
+                        aMin[i] = fSample;
+                    if (fSample > aMax[i])
+                        aMax[i] = fSample;
+                }
 
-				aAvg[i] += fSample;
-			}
-			aAvg[i] /= nNumSamples;
-		}
+                aAvg[i] += fSample;
+            }
+            aAvg[i] /= nNumSamples;
+            qDebug() << "sample " << i << " is " << pfData[i];
+        }
 
         // 去除基线，并保存为二维数组形式
-		for (int i = 0; i < nEegChan; ++i)
-			for (int j = 0; j < nNumSamples; ++j)
-				packet[i][j] = pfData[j * nEegChan + i] - aAvg[i];
-
-		// 50Hz陷波滤波
-		if (notch_check)
-		{
-			spuce::notch_allpass<double, double> Notch(0.05);
-			for (int i = 0; i < nEegChan; ++i)
-				for (int j = 0; j < nNumSamples; ++j)
-					packet[i][j] = Notch.clock(packet[i][j]);
-		}
-
-		// 低通滤波
-//		if (lp_check && ~hp_check)
-        if (lp_check)
-		{
-			// 滤波器阶数
-			long O = 6;
-			// 截止频率，单位为kHz
-			spuce::float_type f_cutoff = ui.doubleSpinBox_low->value() / 1000;
-			// 通带波纹
-			spuce::float_type ripple = 0.5;
-            spuce::iir_coeff F(O);
-            chebyshev_iir(F, f_cutoff, ripple);
-            spuce::iir_df<spuce::float_type> LPF(F);
-			for (int i = 0; i < nEegChan; ++i)
-				for (int j = 0; j < nNumSamples; ++j)
-					packet[i][j] = LPF.clock(packet[i][j]);
-		}
-
-		// 高通滤波
-//		if (hp_check && ~lp_check)
-        if (hp_check)
-		{
-			// 滤波器阶数
-			long O = 6;
-			// 截止频率，单位为kHz
-			spuce::float_type f_cutoff = ui.doubleSpinBox_high->value() / 1000;
-			// 通带波纹
-			spuce::float_type ripple = 0.5;
-            spuce::iir_coeff F(O, spuce::filter_type::high);
-            chebyshev_iir(F, f_cutoff, ripple);
-            spuce::iir_df<spuce::float_type> HPF(F);
-			for (int i = 0; i < nEegChan; ++i)
-				for (int j = 0; j < nNumSamples; ++j)
-					packet[i][j] = HPF.clock(packet[i][j]);
-		}
-
-		// 曲线绘制
-		for (int i = 0; i < nEegChan; ++i)
-		{
-            // 自适应范围
-			double dAutoScale = dDeltaY / ((aMax[i] - aMin[i]) * 1.25);
-            // 偏移量
-			double nYOffset = (i + 0.5) * dDeltaY;
-
-//            qDebug() << data_show[i].size();
-            // 检测是否数据量到上限
-            if (data_show[i].size() == maxSize)
-            {
-                data_show[i].remove(0, nNumSamples);
-//                qDebug() << "I remove";
-
-                // 处理旧数据：横坐标减去一次样本数量的大小
-                QVector<QPointF>::iterator it;
-                for (it = data_show[i].begin(); it != data_show[i].end(); ++it)
-                    it->setX(it->x() - nNumSamples);
-            }
-//            qDebug() << data_show[i].size();
-
-            // 处理新数据
-			QVector<QPointF> aPoints;
-			aPoints.resize(nNumSamples);
+        for (int i = 0; i < nEegChan; ++i)
             for (int j = 0; j < nNumSamples; ++j)
-			{
-                aPoints[j].setX(j + data_show[i].size());
-				aPoints[j].setY(nYOffset + packet[i][j] * dAutoScale);
-			}
+                packet[i][j] = pfData[j * nEegChan + i] - aAvg[i];
 
-            data_show[i].append(aPoints);
+        // 曲线绘制
+//        for (int i = 0; i < nEegChan; ++i)
+//        {
+//            // 自适应范围
+//            double dAutoScale = dDeltaY / ((aMax[i] - aMin[i]) * 1.25);
+//            // 偏移量
+//            double nYOffset = (i + 0.5) * dDeltaY;
 
-            m_spSeries[i]->replace(data_show[i]);
-		}
+//            // 检测是否数据量到上限
+//            if (data_show[i].size() == maxSize)
+//            {
+//                data_show[i].remove(0, nNumSamples);
+
+//                // 处理旧数据：横坐标减去一次样本数量的大小
+//                QVector<QPointF>::iterator it;
+//                for (it = data_show[i].begin(); it != data_show[i].end(); ++it)
+//                    it->setX(it->x() - nNumSamples);
+//            }
+
+//            // 处理新数据
+//            QVector<QPointF> aPoints;
+//            aPoints.resize(nNumSamples);
+//            for (int j = 0; j < nNumSamples; ++j)
+//            {
+//                aPoints[j].setX(j + data_show[i].size());
+//                aPoints[j].setY(nYOffset + packet[i][j] * dAutoScale);
+//            }
+
+//            data_show[i].append(aPoints);
+
+//            m_spSeries[i]->replace(data_show[i]);
+//        }
 //        qDebug() << "data_show:" << 0 << data_show[0].size();
-		// 设置x轴刻度范围
-        m_axisX->setRange(0, data_show[0].size());
-	}
+        // 设置x轴刻度范围
+//        m_axisX->setRange(0, data_show[0].size());
+    }
 
     // 初始化线条
 	void MainWindow::InitLines(int lineNums)

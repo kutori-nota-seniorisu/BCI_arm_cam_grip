@@ -966,12 +966,6 @@ kdl_conversions_DIR:PATH=/opt/ros/melodic/share/kdl_conversions/cmake
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/melodic/share/kdl_parser/cmake
 
-//Value Computed by CMake
-key_read_BINARY_DIR:STATIC=/home/sd/catkin_ws/build/key_read
-
-//Value Computed by CMake
-key_read_SOURCE_DIR:STATIC=/home/sd/catkin_ws/src/key_read
-
 //The directory containing a CMake configuration file for laser_geometry.
 laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 
@@ -1440,6 +1434,9 @@ ur_msgs_DIR:PATH=/home/sd/catkin_ws/devel/share/ur_msgs/cmake
 //Value Computed by CMake
 ur_msgs_SOURCE_DIR:STATIC=/home/sd/catkin_ws/src/universal_robot/ur_msgs
 
+//The directory containing a CMake configuration file for ur_rtde.
+ur_rtde_DIR:PATH=/usr/local/lib/cmake/ur_rtde
+
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/melodic/share/urdf/cmake
 
@@ -1548,16 +1545,16 @@ AVCODEC_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVCODEC_STATIC_CFLAGS_I:INTERNAL=
 AVCODEC_STATIC_CFLAGS_OTHER:INTERNAL=
 AVCODEC_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-AVCODEC_STATIC_LDFLAGS:INTERNAL=-lavcodec;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-ldrm;-lm
+AVCODEC_STATIC_LDFLAGS:INTERNAL=-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lwebpmux;-lwebp;-lm;-llzma;-lcrystalhd;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lzvbi;-lm;-lpthread;-lm;-lpng;-lz;-lsnappy;-lstdc++;-lz;-laom;-lm;-lpthread;-lcodec2;-lfdk-aac;-lgsm;-lmp3lame;-lm;-lopenjp2;-lopus;-lm;-lshine;-lspeex;-ltheoraenc;-ltheoradec;-logg;-ltwolame;-lvorbis;-lvorbisenc;-lwavpack;-lwebp;-lx264;-lx265;-lxvidcore;-ldl;-pthread;-lva;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lva-drm;-lva;-lva-x11;-lva;-lvdpau;-lX11;-lm;-ldrm;-lva;-lXv;-lX11;-lXext
 AVCODEC_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 AVCODEC_STATIC_LIBDIR:INTERNAL=
-AVCODEC_STATIC_LIBRARIES:INTERNAL=avcodec;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;swresample;m;soxr;avutil;drm;m
+AVCODEC_STATIC_LIBRARIES:INTERNAL=avcodec;vpx;m;vpx;m;vpx;m;vpx;m;webpmux;webp;m;lzma;crystalhd;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;zvbi;m;pthread;m;png;z;snappy;stdc++;z;aom;m;pthread;codec2;fdk-aac;gsm;mp3lame;m;openjp2;opus;m;shine;speex;theoraenc;theoradec;ogg;twolame;vorbis;vorbisenc;wavpack;webp;x264;x265;xvidcore;dl;va;swresample;m;soxr;avutil;va-drm;va;va-x11;va;vdpau;X11;m;drm;va;Xv;X11;Xext
 AVCODEC_STATIC_LIBRARY_DIRS:INTERNAL=
 AVCODEC_STATIC_LIBS:INTERNAL=
 AVCODEC_STATIC_LIBS_L:INTERNAL=
 AVCODEC_STATIC_LIBS_OTHER:INTERNAL=
 AVCODEC_STATIC_LIBS_PATHS:INTERNAL=
-AVCODEC_VERSION:INTERNAL=57.107.100
+AVCODEC_VERSION:INTERNAL=58.35.100
 AVCODEC_libavcodec_INCLUDEDIR:INTERNAL=
 AVCODEC_libavcodec_LIBDIR:INTERNAL=
 AVCODEC_libavcodec_PREFIX:INTERNAL=
@@ -1581,16 +1578,16 @@ AVDEVICE_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVDEVICE_STATIC_CFLAGS_I:INTERNAL=
 AVDEVICE_STATIC_CFLAGS_OTHER:INTERNAL=
 AVDEVICE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-AVDEVICE_STATIC_LDFLAGS:INTERNAL=-lavdevice;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lavfilter;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lavresample;-lm;-lswscale;-lm;-lpostproc;-lavformat;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lavcodec;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-ldrm;-lm
+AVDEVICE_STATIC_LDFLAGS:INTERNAL=-lavdevice;-lm;-lraw1394;-lavc1394;-lrom1394;-liec61883;-ljack;-ldrm;-lopenal;-lxcb;-lxcb-shm;-lxcb-shape;-lxcb-xfixes;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lm;-ldc1394;-lasound;-lcaca;-lGL;-lpulse;-lSDL2;-lsndio;-lXv;-lX11;-lXext;-lavfilter;-pthread;-lm;-lbs2b;-llilv-0;-ldl;-lsratom-0;-lsord-0;-lserd-0;-lrubberband;-lstdc++;-lmysofa;-lz;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-lfribidi;-lva;-lass;-lvidstab;-lm;-lgomp;-lzmq;-ldl;-lfontconfig;-lfreetype;-lswscale;-lm;-lpostproc;-lm;-lavformat;-lm;-lxml2;-lbz2;-lgme;-lstdc++;-lopenmpt;-lstdc++;-lchromaprint;-lbluray;-lz;-lgnutls;-lssh;-ldl;-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lwebpmux;-lwebp;-lm;-llzma;-lcrystalhd;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lzvbi;-lm;-lpthread;-lm;-lpng;-lz;-lsnappy;-lstdc++;-lz;-laom;-lm;-lpthread;-lcodec2;-lfdk-aac;-lgsm;-lmp3lame;-lm;-lopenjp2;-lopus;-lm;-lshine;-lspeex;-ltheoraenc;-ltheoradec;-logg;-ltwolame;-lvorbis;-lvorbisenc;-lwavpack;-lwebp;-lx264;-lx265;-lxvidcore;-ldl;-pthread;-lva;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lva-drm;-lva;-lva-x11;-lva;-lvdpau;-lX11;-lm;-ldrm;-lva;-lXv;-lX11;-lXext
 AVDEVICE_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 AVDEVICE_STATIC_LIBDIR:INTERNAL=
-AVDEVICE_STATIC_LIBRARIES:INTERNAL=avdevice;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;avfilter;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;avresample;m;swscale;m;postproc;avformat;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;avcodec;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;swresample;m;soxr;avutil;drm;m
+AVDEVICE_STATIC_LIBRARIES:INTERNAL=avdevice;m;raw1394;avc1394;rom1394;iec61883;jack;drm;openal;xcb;xcb-shm;xcb-shape;xcb-xfixes;cdio_paranoia;cdio_cdda;cdio;m;dc1394;asound;caca;GL;pulse;SDL2;sndio;Xv;X11;Xext;avfilter;m;bs2b;lilv-0;dl;sratom-0;sord-0;serd-0;rubberband;stdc++;mysofa;z;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;fribidi;va;ass;vidstab;m;gomp;zmq;dl;fontconfig;freetype;swscale;m;postproc;m;avformat;m;xml2;bz2;gme;stdc++;openmpt;stdc++;chromaprint;bluray;z;gnutls;ssh;dl;avcodec;vpx;m;vpx;m;vpx;m;vpx;m;webpmux;webp;m;lzma;crystalhd;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;zvbi;m;pthread;m;png;z;snappy;stdc++;z;aom;m;pthread;codec2;fdk-aac;gsm;mp3lame;m;openjp2;opus;m;shine;speex;theoraenc;theoradec;ogg;twolame;vorbis;vorbisenc;wavpack;webp;x264;x265;xvidcore;dl;va;swresample;m;soxr;avutil;va-drm;va;va-x11;va;vdpau;X11;m;drm;va;Xv;X11;Xext
 AVDEVICE_STATIC_LIBRARY_DIRS:INTERNAL=
 AVDEVICE_STATIC_LIBS:INTERNAL=
 AVDEVICE_STATIC_LIBS_L:INTERNAL=
 AVDEVICE_STATIC_LIBS_OTHER:INTERNAL=
 AVDEVICE_STATIC_LIBS_PATHS:INTERNAL=
-AVDEVICE_VERSION:INTERNAL=57.10.100
+AVDEVICE_VERSION:INTERNAL=58.5.100
 AVDEVICE_libavdevice _INCLUDEDIR:INTERNAL=
 AVDEVICE_libavdevice _LIBDIR:INTERNAL=
 AVDEVICE_libavdevice _PREFIX:INTERNAL=
@@ -1614,16 +1611,16 @@ AVFORMAT_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVFORMAT_STATIC_CFLAGS_I:INTERNAL=
 AVFORMAT_STATIC_CFLAGS_OTHER:INTERNAL=
 AVFORMAT_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-AVFORMAT_STATIC_LDFLAGS:INTERNAL=-lavformat;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lavcodec;-lXv;-lX11;-lXext;-lSDL2;-lzmq;-lwebp;-lssh;-lpulse;-lopenmpt;-ldrm;-lbs2b;-lbluray;-lass;-lgnutls;-lSDL2;-lcrystalhd;-lvdpau;-lX11;-lva;-lva-x11;-lX11;-lva;-lva-drm;-lva;-lxcb;-lxcb-shm;-lxcb-xfixes;-lxcb-shape;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-lGL;-lopenal;-lxml2;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebpmux;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lpulse;-lopus;-lopenmpt;-lopenjp2;-lopencv_core;-lopencv_imgproc;-lmysofa;-lmp3lame;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-ldrm;-ldc1394;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-lm;-ldl;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-ldrm;-lm
+AVFORMAT_STATIC_LDFLAGS:INTERNAL=-lavformat;-lm;-lxml2;-lbz2;-lgme;-lstdc++;-lopenmpt;-lstdc++;-lchromaprint;-lbluray;-lz;-lgnutls;-lssh;-ldl;-lavcodec;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lwebpmux;-lwebp;-lm;-llzma;-lcrystalhd;-lrsvg-2;-lm;-lgio-2.0;-lgdk_pixbuf-2.0;-lgobject-2.0;-lglib-2.0;-lcairo;-lzvbi;-lm;-lpthread;-lm;-lpng;-lz;-lsnappy;-lstdc++;-lz;-laom;-lm;-lpthread;-lcodec2;-lfdk-aac;-lgsm;-lmp3lame;-lm;-lopenjp2;-lopus;-lm;-lshine;-lspeex;-ltheoraenc;-ltheoradec;-logg;-ltwolame;-lvorbis;-lvorbisenc;-lwavpack;-lwebp;-lx264;-lx265;-lxvidcore;-ldl;-pthread;-lva;-lswresample;-lm;-lsoxr;-lavutil;-pthread;-lva-drm;-lva;-lva-x11;-lva;-lvdpau;-lX11;-lm;-ldrm;-lva;-lXv;-lX11;-lXext
 AVFORMAT_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 AVFORMAT_STATIC_LIBDIR:INTERNAL=
-AVFORMAT_STATIC_LIBRARIES:INTERNAL=avformat;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;avcodec;Xv;X11;Xext;SDL2;zmq;webp;ssh;pulse;openmpt;drm;bs2b;bluray;ass;gnutls;SDL2;crystalhd;vdpau;X11;va;va-x11;X11;va;va-drm;va;xcb;xcb-shm;xcb-xfixes;xcb-shape;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;GL;openal;xml2;zvbi;zmq;xvidcore;x265;x264;webpmux;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;pulse;opus;openmpt;openjp2;opencv_core;opencv_imgproc;mysofa;mp3lame;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;drm;dc1394;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;m;dl;lzma;bz2;z;swresample;m;soxr;avutil;drm;m
+AVFORMAT_STATIC_LIBRARIES:INTERNAL=avformat;m;xml2;bz2;gme;stdc++;openmpt;stdc++;chromaprint;bluray;z;gnutls;ssh;dl;avcodec;vpx;m;vpx;m;vpx;m;vpx;m;webpmux;webp;m;lzma;crystalhd;rsvg-2;m;gio-2.0;gdk_pixbuf-2.0;gobject-2.0;glib-2.0;cairo;zvbi;m;pthread;m;png;z;snappy;stdc++;z;aom;m;pthread;codec2;fdk-aac;gsm;mp3lame;m;openjp2;opus;m;shine;speex;theoraenc;theoradec;ogg;twolame;vorbis;vorbisenc;wavpack;webp;x264;x265;xvidcore;dl;va;swresample;m;soxr;avutil;va-drm;va;va-x11;va;vdpau;X11;m;drm;va;Xv;X11;Xext
 AVFORMAT_STATIC_LIBRARY_DIRS:INTERNAL=
 AVFORMAT_STATIC_LIBS:INTERNAL=
 AVFORMAT_STATIC_LIBS_L:INTERNAL=
 AVFORMAT_STATIC_LIBS_OTHER:INTERNAL=
 AVFORMAT_STATIC_LIBS_PATHS:INTERNAL=
-AVFORMAT_VERSION:INTERNAL=57.83.100
+AVFORMAT_VERSION:INTERNAL=58.20.100
 AVFORMAT_libavformat_INCLUDEDIR:INTERNAL=
 AVFORMAT_libavformat_LIBDIR:INTERNAL=
 AVFORMAT_libavformat_PREFIX:INTERNAL=
@@ -1647,16 +1644,16 @@ AVUTIL_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 AVUTIL_STATIC_CFLAGS_I:INTERNAL=
 AVUTIL_STATIC_CFLAGS_OTHER:INTERNAL=
 AVUTIL_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-AVUTIL_STATIC_LDFLAGS:INTERNAL=-lavutil;-ldrm;-lm
-AVUTIL_STATIC_LDFLAGS_OTHER:INTERNAL=
+AVUTIL_STATIC_LDFLAGS:INTERNAL=-lavutil;-pthread;-lva-drm;-lva;-lva-x11;-lva;-lvdpau;-lX11;-lm;-ldrm;-lva;-lXv;-lX11;-lXext
+AVUTIL_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 AVUTIL_STATIC_LIBDIR:INTERNAL=
-AVUTIL_STATIC_LIBRARIES:INTERNAL=avutil;drm;m
+AVUTIL_STATIC_LIBRARIES:INTERNAL=avutil;va-drm;va;va-x11;va;vdpau;X11;m;drm;va;Xv;X11;Xext
 AVUTIL_STATIC_LIBRARY_DIRS:INTERNAL=
 AVUTIL_STATIC_LIBS:INTERNAL=
 AVUTIL_STATIC_LIBS_L:INTERNAL=
 AVUTIL_STATIC_LIBS_OTHER:INTERNAL=
 AVUTIL_STATIC_LIBS_PATHS:INTERNAL=
-AVUTIL_VERSION:INTERNAL=55.78.100
+AVUTIL_VERSION:INTERNAL=56.22.100
 AVUTIL_libavutil_INCLUDEDIR:INTERNAL=
 AVUTIL_libavutil_LIBDIR:INTERNAL=
 AVUTIL_libavutil_PREFIX:INTERNAL=
@@ -1850,7 +1847,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=48
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=47
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2264,16 +2261,16 @@ SWSCALE_STATIC_CFLAGS:INTERNAL=-I/usr/include/x86_64-linux-gnu
 SWSCALE_STATIC_CFLAGS_I:INTERNAL=
 SWSCALE_STATIC_CFLAGS_OTHER:INTERNAL=
 SWSCALE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/x86_64-linux-gnu
-SWSCALE_STATIC_LDFLAGS:INTERNAL=-lswscale;-lm;-lavutil;-ldrm;-lm
-SWSCALE_STATIC_LDFLAGS_OTHER:INTERNAL=
+SWSCALE_STATIC_LDFLAGS:INTERNAL=-lswscale;-lm;-lavutil;-pthread;-lva-drm;-lva;-lva-x11;-lva;-lvdpau;-lX11;-lm;-ldrm;-lva;-lXv;-lX11;-lXext
+SWSCALE_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
 SWSCALE_STATIC_LIBDIR:INTERNAL=
-SWSCALE_STATIC_LIBRARIES:INTERNAL=swscale;m;avutil;drm;m
+SWSCALE_STATIC_LIBRARIES:INTERNAL=swscale;m;avutil;va-drm;va;va-x11;va;vdpau;X11;m;drm;va;Xv;X11;Xext
 SWSCALE_STATIC_LIBRARY_DIRS:INTERNAL=
 SWSCALE_STATIC_LIBS:INTERNAL=
 SWSCALE_STATIC_LIBS_L:INTERNAL=
 SWSCALE_STATIC_LIBS_OTHER:INTERNAL=
 SWSCALE_STATIC_LIBS_PATHS:INTERNAL=
-SWSCALE_VERSION:INTERNAL=4.8.100
+SWSCALE_VERSION:INTERNAL=5.3.100
 SWSCALE_libswscale_INCLUDEDIR:INTERNAL=
 SWSCALE_libswscale_LIBDIR:INTERNAL=
 SWSCALE_libswscale_PREFIX:INTERNAL=

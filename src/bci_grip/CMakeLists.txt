@@ -55,6 +55,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 find_package(Eigen3 REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(ur_rtde REQUIRED)
 
 # check c++11 / c++0x
 include(CheckCXXCompilerFlag)
@@ -199,6 +200,7 @@ include_directories(
   ${Eigen_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   ${realsense2_INCLUDE_DIR}
+  ~/code/catkin_ws/src/hrc/include
   #~/catkin_ws/devel/include
 )
 
@@ -240,9 +242,17 @@ add_executable(col_align_dep src/col_align_dep.cpp)
 target_link_libraries(col_align_dep
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
-    subpicpubsig)
+    subpicpubsig
+    ur_rtde::rtde
+)
 target_link_libraries(col_align_dep /opt/ros/melodic/lib/libmessage_filters.so)
 target_link_libraries(col_align_dep /opt/ros/melodic/lib/libcv_bridge.so)
+
+add_executable(test_position src/test_position.cpp)
+target_link_libraries(test_position
+    ${catkin_LIBRARIES}
+    ${OpenCV_LIBS}
+)
 
 add_executable(node_pic_cpp2 src/node_pic_cpp2.cpp)
 target_link_libraries(node_pic_cpp2
@@ -251,8 +261,14 @@ target_link_libraries(node_pic_cpp2 ${OpenCV_LIBS})
 
 add_executable(bci_ur5 src/bci_ur5.cpp)
 target_link_libraries(bci_ur5 ${catkin_LIBRARIES})
+add_executable(ur5_test_go_home_up src/go_home_up.cpp)
+target_link_libraries(ur5_test_go_home_up ${catkin_LIBRARIES})
 
-
+add_executable(bci_ur_actual src/bci_ur_move.cpp)
+target_link_libraries(bci_ur_actual 
+    ${catkin_LIBRARIES}
+    ur_rtde::rtde
+)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

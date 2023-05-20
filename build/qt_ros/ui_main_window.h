@@ -417,7 +417,7 @@ public:
         label_2->setText(QApplication::translate("MainWindowDesign", "Port", Q_NULLPTR));
         lineEdit_port->setText(QApplication::translate("MainWindowDesign", "4455", Q_NULLPTR));
         button_connect->setText(QApplication::translate("MainWindowDesign", "Connect", Q_NULLPTR));
-        lineEdit_ip->setText(QApplication::translate("MainWindowDesign", "127.0.0.1", Q_NULLPTR));
+        lineEdit_ip->setText(QApplication::translate("MainWindowDesign", "192.170.0.2", Q_NULLPTR));
         checkBox_notch->setText(QApplication::translate("MainWindowDesign", "50 Hz", Q_NULLPTR));
         checkBox_high->setText(QApplication::translate("MainWindowDesign", "High Pass", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindowDesign", "Freq.[Hz]", Q_NULLPTR));
