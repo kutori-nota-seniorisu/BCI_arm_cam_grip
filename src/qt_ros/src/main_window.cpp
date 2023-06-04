@@ -198,7 +198,7 @@ namespace qt_ros
                 aAvg[i] += fSample;
             }
             aAvg[i] /= nNumSamples;
-            qDebug() << "sample " << i << " is " << pfData[i];
+            // qDebug() << "sample " << i << " is " << pfData[i];
         }
 
         // 去除基线，并保存为二维数组形式

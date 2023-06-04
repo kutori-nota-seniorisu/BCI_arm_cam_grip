@@ -16,7 +16,7 @@ from std_msgs.msg import Float32MultiArray
 # 采样频率，默认为2048Hz
 sampleRate = 2048
 # 数组缓存区大小
-BUFFSIZE = sampleRate * 2
+BUFFSIZE = sampleRate * 3
 # 频率序列
 freqList = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 # 每个数据包大小
@@ -26,7 +26,7 @@ anaInter = 0.5
 # 分类结果阈值
 r_threshold = 0.6
 # 选用分析方法，method = 1:CCA，method = 2:FBCCA
-method = 2
+method = 1
 
 # 参数：降采样
 downSamplingNum = 8
@@ -151,7 +151,7 @@ def callback_get_packet(data):
 			# 判断本次分类是否有效
 			d = r_cca[index_rcca[-1]] - r_cca[index_rcca[-2]]
 			print("差值：", d)
-			if d > 0:
+			if d > 0.1:
 				# 获取相关系数最大的索引并查找对应频率
 				# 将查找到的频率添加到结果数组中
 				# 四次中三次相同则可确定
@@ -218,8 +218,8 @@ def callback_get_packet(data):
 			camera_state.data = camera_on
 			state_result_pub.publish(camera_state)
 			camera_on_pub.publish(camera_state)
-			time.sleep(0.5)
-			print("延时0.5")
+			# time.sleep(0.5)
+			# print("延时0.5")
 		if camera_on == True and real_res != 0 and real_res != 17:
 			print("本次实验结果为", real_res)
 			res_pub = UInt16()

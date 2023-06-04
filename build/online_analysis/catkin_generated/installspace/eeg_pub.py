@@ -46,7 +46,7 @@ def talker():
             # packet = gauss_noise[:, packet_i * packetSize : (packet_i + 1) * packetSize]
             packet = np.random.normal(0, 1, (35, 512))
         elif target > 0 and target < 10:
-            packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target - 1]
+            packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target - 1].T
         packet_pub.data = packet.reshape(35 * 512)
         pub.publish(packet_pub)
         print("talker", target)

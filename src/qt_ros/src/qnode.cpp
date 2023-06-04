@@ -74,8 +74,8 @@ namespace qt_ros
     void QNode::QNode_Pub_Packet(float *pfData, int nChannels, long nSamples)
 	{
 		std::vector<float> vEegData(pfData, pfData + nChannels * nSamples);
-        for (int i = 0; i < nChannels; ++i)
-            qDebug() << "eegdata " << i << " is " << vEegData[i];
+        // for (int i = 0; i < nChannels; ++i)
+        //     qDebug() << "eegdata " << i << " is " << vEegData[i];
         std_msgs::Float32MultiArray msg;
 		msg.data = vEegData;
         ROS_INFO("I pub packet data");

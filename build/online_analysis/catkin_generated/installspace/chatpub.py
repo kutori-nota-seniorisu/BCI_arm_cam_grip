@@ -13,19 +13,21 @@ def talker():
     rate = rospy.Rate(4)
     # rawdata =  scio.loadmat('/home/sd/eegdata_v7.mat')
     # eegdata = np.array(rawdata['eegdata'])
+
     rawdata =  scio.loadmat('/home/sd/matlab.mat')
     eegdata = np.array(rawdata['data'])
     eegdata = eegdata[:, 0:53248]
     eegdata = np.expand_dims(eegdata, axis = -1)
     eegdata = np.expand_dims(eegdata, axis = -1)
-    eegdata = eegdata[::-1]
+    # eegdata = eegdata[::-1]
     print(eegdata.shape)
+
     packet_pub = Float32MultiArray()
     exper_i = 0
     target_i = 0
     packet_i = 0
     while not rospy.is_shutdown():
-        packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target_i, exper_i]
+        packet = eegdata[:, packet_i * packetSize : (packet_i + 1) * packetSize, target_i, exper_i].T
         packet_pub.data = packet.reshape(35 * 512)
         rospy.loginfo("I publish: %i exper, %i target, %i packet", exper_i + 1, target_i + 1, packet_i + 1)
         pub.publish(packet_pub)
