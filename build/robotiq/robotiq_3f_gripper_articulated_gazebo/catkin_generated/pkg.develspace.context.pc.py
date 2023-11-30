@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "robotiq_3f_gripper_articulated_gazebo"
-PROJECT_SPACE_DIR = "/home/sd/catkin_ws/devel"
+PROJECT_SPACE_DIR = "/home/sd/BCI_arm_cam_grip/devel"
 PROJECT_VERSION = "1.0.0"

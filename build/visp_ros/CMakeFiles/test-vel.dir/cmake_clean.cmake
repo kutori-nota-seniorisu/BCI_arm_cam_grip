@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/test-vel"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/test-vel.pdb"
   "CMakeFiles/test-vel.dir/tutorial/franka/coppeliasim/test-vel.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/test-vel.pdb"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/test-vel"
 )
 
 # Per-language clean rules from dependency scanning.

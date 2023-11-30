@@ -117,22 +117,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<ContainerAllocator> const>
   : TrueType
   { };
 

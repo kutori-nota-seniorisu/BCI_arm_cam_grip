@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/libvisp_hand2eye_calibration_common.pdb"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/libvisp_hand2eye_calibration_common.so"
   "CMakeFiles/visp_hand2eye_calibration_common.dir/src/names.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/libvisp_hand2eye_calibration_common.pdb"
-  "/home/sd/catkin_ws/devel/lib/libvisp_hand2eye_calibration_common.so"
 )
 
 # Per-language clean rules from dependency scanning.

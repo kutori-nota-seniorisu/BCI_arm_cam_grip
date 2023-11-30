@@ -128,17 +128,17 @@ void subpicpubsiger::process_pic(cv::Mat color_image)
             cv::Point2f cpt = rrect.center;
             //ROS_INFO("%f, %f", cpt.x, cpt.y);
             //绘制旋转矩形与中心位置
-            // for(int j = 0; j < 4 ; j++)
-            // {
-            //     if(j == 3)
-            //     {
-            //         cv::line(Img, points[j], points[0], cv::Scalar(0, 255, 0), 2, 8, 0);
-            //         break;
-            //     }
-            //     cv::line(Img, points[j], points[j + 1], cv::Scalar(0, 255, 0), 2, 8, 0);
-            // }
+            for(int j = 0; j < 4 ; j++)
+            {
+                if(j == 3)
+                {
+                    cv::line(Img, points[j], points[0], cv::Scalar(0, 255, 0), 2, 8, 0);
+                    break;
+                }
+                cv::line(Img, points[j], points[j + 1], cv::Scalar(0, 255, 0), 2, 8, 0);
+            }
             //绘制矩形中心
-            // cv::circle(Img, cpt, 2, cv::Scalar(0, 255, 0), 2, 8, 0);
+            cv::circle(Img, cpt, 2, cv::Scalar(0, 255, 0), 2, 8, 0);
             //将图像中物块的位置及边长存储到PositionLength_Array中
             PositionLength_Array.push_back(cpt.x);
             PositionLength_Array.push_back(cpt.y);

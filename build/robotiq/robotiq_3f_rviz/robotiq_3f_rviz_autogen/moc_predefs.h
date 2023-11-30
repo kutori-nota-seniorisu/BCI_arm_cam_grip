@@ -88,6 +88,7 @@
 #define __FLT_EPSILON__ 1.19209289550781250000000000000000000e-7F
 #define __GXX_WEAK__ 1
 #define __SHRT_WIDTH__ 16
+#define robotiq_3f_rviz_EXPORTS 1
 #define __LDBL_MIN__ 3.36210314311209350626267781732175260e-4932L
 #define __DEC32_MAX__ 9.999999E96DF
 #define __cpp_threadsafe_static_init 200806
@@ -148,7 +149,6 @@
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
 #define ROS_BUILD_SHARED_LIBS 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __FLT32_HAS_QUIET_NAN__ 1
 #define __GNUG__ 7

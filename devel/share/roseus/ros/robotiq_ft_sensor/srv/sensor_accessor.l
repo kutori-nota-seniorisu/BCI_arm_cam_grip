@@ -30,6 +30,15 @@
 (intern "*COMMAND_SET_ZERO*" (find-package "ROBOTIQ_FT_SENSOR::SENSOR_ACCESSORREQUEST"))
 (shadow '*COMMAND_SET_ZERO* (find-package "ROBOTIQ_FT_SENSOR::SENSOR_ACCESSORREQUEST"))
 (defconstant robotiq_ft_sensor::sensor_accessorRequest::*COMMAND_SET_ZERO* 8)
+
+(defun robotiq_ft_sensor::sensor_accessorRequest-to-symbol (const)
+  (cond
+        ((= const 1) 'robotiq_ft_sensor::sensor_accessorRequest::*COMMAND_GET_SERIAL_NUMBER*)
+        ((= const 2) 'robotiq_ft_sensor::sensor_accessorRequest::*COMMAND_GET_FIRMWARE_VERSION*)
+        ((= const 4) 'robotiq_ft_sensor::sensor_accessorRequest::*COMMAND_GET_PRODUCTION_YEAR*)
+        ((= const 8) 'robotiq_ft_sensor::sensor_accessorRequest::*COMMAND_SET_ZERO*)
+        (t nil)))
+
 (defclass robotiq_ft_sensor::sensor_accessorRequest
   :super ros::object
   :slots (_command_id _command ))
@@ -93,8 +102,8 @@
    (setq _res (string __res))
    self)
   (:success
-   (&optional __success)
-   (if __success (setq _success __success)) _success)
+   (&optional (__success :null))
+   (if (not (eq __success :null)) (setq _success __success)) _success)
   (:res
    (&optional __res)
    (if __res (setq _res __res)) _res)

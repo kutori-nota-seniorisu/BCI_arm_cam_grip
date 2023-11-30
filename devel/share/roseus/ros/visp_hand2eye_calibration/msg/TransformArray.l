@@ -24,7 +24,7 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:transforms __transforms) (let (r) (dotimes (i 0) (push (instance geometry_msgs::Transform :init) r)) r))
+    ((:transforms __transforms) ())
     )
    (send-super :init)
    (setq _header __header)

@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_joint_state_publisher
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_joint_state_publisher
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisher.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisher.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_joint_state_publisher/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisherConfig.cmake"
-    "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisherConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisherConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_joint_state_publisher/catkin_generated/installspace/robotiq_3f_gripper_joint_state_publisherConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_joint_state_publisher" TYPE FILE FILES "/home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_joint_state_publisher/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_joint_state_publisher" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_joint_state_publisher/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher" TYPE EXECUTABLE FILES "/home/sd/catkin_ws/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher" TYPE EXECUTABLE FILES "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states"
-         OLD_RPATH "/home/sd/catkin_ws/devel/lib:/opt/ros/melodic/lib:"
+         OLD_RPATH "/home/sd/BCI_arm_cam_grip/devel/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states")

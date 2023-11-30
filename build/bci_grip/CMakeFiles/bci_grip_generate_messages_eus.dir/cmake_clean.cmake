@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/bci_grip/manifest.l"
   "CMakeFiles/bci_grip_generate_messages_eus"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/bci_grip/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

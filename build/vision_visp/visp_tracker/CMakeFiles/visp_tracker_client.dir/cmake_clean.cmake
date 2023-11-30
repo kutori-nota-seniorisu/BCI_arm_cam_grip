@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_tracker/visp_tracker_client"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_tracker/visp_tracker_client.pdb"
   "CMakeFiles/visp_tracker_client.dir/src/nodes/client.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/visp_tracker/visp_tracker_client.pdb"
-  "/home/sd/catkin_ws/devel/lib/visp_tracker/visp_tracker_client"
 )
 
 # Per-language clean rules from dependency scanning.

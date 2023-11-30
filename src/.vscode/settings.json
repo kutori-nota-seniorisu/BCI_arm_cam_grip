@@ -77,7 +77,11 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "eigen": "cpp",
+        "dense": "cpp",
+        "geometry": "cpp",
+        "eigenvalues": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "ros.distro": "melodic"

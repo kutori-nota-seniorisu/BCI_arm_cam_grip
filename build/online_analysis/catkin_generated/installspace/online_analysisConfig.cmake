@@ -67,14 +67,14 @@ set(online_analysis_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(online_analysis_SOURCE_PREFIX /home/sd/catkin_ws/src/online_analysis)
-  set(online_analysis_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(online_analysis_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/online_analysis)
+  set(online_analysis_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(online_analysis_INSTALL_PREFIX "")
   set(online_analysis_PREFIX ${online_analysis_DEVEL_PREFIX})
 else()
   set(online_analysis_SOURCE_PREFIX "")
   set(online_analysis_DEVEL_PREFIX "")
-  set(online_analysis_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(online_analysis_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(online_analysis_PREFIX ${online_analysis_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/install/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(online_analysis_LIBRARIES ${online_analysis_LIBRARIES})
 
   _list_append_unique(online_analysis_LIBRARY_DIRS ${${online_analysis_dep}_LIBRARY_DIRS})
-  list(APPEND online_analysis_EXPORTED_TARGETS ${${online_analysis_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(online_analysis_EXPORTED_TARGETS ${${online_analysis_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

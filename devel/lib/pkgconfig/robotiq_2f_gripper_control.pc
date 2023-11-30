@@ -1,8 +1,8 @@
-prefix=/home/sd/catkin_ws/devel
+prefix=/home/sd/BCI_arm_cam_grip/devel
 
 Name: robotiq_2f_gripper_control
 Description: Description of robotiq_2f_gripper_control
 Version: 1.0.0
-Cflags: -I/home/sd/catkin_ws/devel/include -I/home/sd/catkin_ws/src/robotiq/robotiq_2f_gripper_control/include
+Cflags: -I/home/sd/BCI_arm_cam_grip/devel/include -I/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_gripper_control/include
 Libs: -L${prefix}/lib 
 Requires: rospy message_runtime roscpp robotiq_ethercat

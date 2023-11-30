@@ -16,7 +16,6 @@ find_package(catkin REQUIRED COMPONENTS
   industrial_msgs
   std_srvs
   trajectory_msgs
-  ur_msgs
   moveit_ros_move_group
   gazebo_plugins
   gazebo_ros
@@ -50,7 +49,6 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   message_filters
 
-  ur_modern_driver
   robotiq_2f_gripper_control
 )
 find_package(Eigen3 REQUIRED)
@@ -81,6 +79,7 @@ endif()
 if (WIN32)
 find_package(realsense2 CONFIG REQUIRED)
 else()
+# find_package(realsense2 2.54.2)
 find_package(realsense2 2.50.0)
 endif()
 
@@ -200,7 +199,6 @@ include_directories(
   ${Eigen_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
   ${realsense2_INCLUDE_DIR}
-  ~/code/catkin_ws/src/hrc/include
   #~/catkin_ws/devel/include
 )
 
@@ -224,19 +222,6 @@ add_library(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/bci_grip_node.cpp)
-add_executable(transC src/transC.cpp)
-target_link_libraries(transC
-    ${catkin_LIBRARIES})
-
-add_executable(node_pic_cpp src/node_pic_cpp.cpp)
-target_link_libraries(node_pic_cpp ${catkin_LIBRARIES})
-target_link_libraries(node_pic_cpp ${OpenCV_LIBS})
-target_link_libraries(node_pic_cpp ${realsense2_LIBRARY})
-
-add_executable(readCam src/readCam.cpp)
-target_link_libraries(readCam
-    ${catkin_LIBRARIES})
-target_link_libraries(readCam ${OpenCV_LIBS})
 
 add_executable(col_align_dep src/col_align_dep.cpp)
 target_link_libraries(col_align_dep
@@ -245,22 +230,25 @@ target_link_libraries(col_align_dep
     subpicpubsig
     ur_rtde::rtde
 )
-target_link_libraries(col_align_dep /opt/ros/melodic/lib/libmessage_filters.so)
-target_link_libraries(col_align_dep /opt/ros/melodic/lib/libcv_bridge.so)
+target_link_libraries(col_align_dep /opt/ros/noetic/lib/libmessage_filters.so)
+target_link_libraries(col_align_dep /opt/ros/noetic/lib/libcv_bridge.so)
 
-add_executable(test_position src/test_position.cpp)
-target_link_libraries(test_position
+add_executable(test_realsense_show src/test_realsense_show.cpp)
+target_link_libraries(test_realsense_show
     ${catkin_LIBRARIES}
     ${OpenCV_LIBS}
+    subpicpubsig
+    ur_rtde::rtde
 )
+target_link_libraries(test_realsense_show /opt/ros/noetic/lib/libmessage_filters.so)
+target_link_libraries(test_realsense_show /opt/ros/noetic/lib/libcv_bridge.so)
 
-add_executable(node_pic_cpp2 src/node_pic_cpp2.cpp)
-target_link_libraries(node_pic_cpp2
-    ${catkin_LIBRARIES})
-target_link_libraries(node_pic_cpp2 ${OpenCV_LIBS})
+# add_executable(test_position src/test_position.cpp)
+# target_link_libraries(test_position
+#     ${catkin_LIBRARIES}
+#     ${OpenCV_LIBS}
+# )
 
-add_executable(bci_ur5 src/bci_ur5.cpp)
-target_link_libraries(bci_ur5 ${catkin_LIBRARIES})
 add_executable(ur5_test_go_home_up src/go_home_up.cpp)
 target_link_libraries(ur5_test_go_home_up ${catkin_LIBRARIES})
 
@@ -268,6 +256,14 @@ add_executable(bci_ur_actual src/bci_ur_move.cpp)
 target_link_libraries(bci_ur_actual 
     ${catkin_LIBRARIES}
     ur_rtde::rtde
+)
+
+add_executable(testpic_pub src/testpic_pub.cpp)
+target_link_libraries(testpic_pub 
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  /opt/ros/noetic/lib/libmessage_filters.so
+  /opt/ros/noetic/lib/libcv_bridge.so
 )
 
 ## Rename C++ executable without prefix
@@ -294,10 +290,10 @@ target_link_libraries(bci_ur_actual
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  scripts/ssvep_ptb.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
@@ -339,18 +335,3 @@ target_link_libraries(bci_ur_actual
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-catkin_install_python(PROGRAMS
-  src/measure.py #功能包下的代码文件所在路径  代码文件夹/代码文件名
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
-catkin_install_python(PROGRAMS
-  src/node_pic_py.py #功能包下的代码文件所在路径  代码文件夹/代码文件名
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
-catkin_install_python(PROGRAMS
-  src/png2jpg.py #功能包下的代码文件所在路径  代码文件夹/代码文件名
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)

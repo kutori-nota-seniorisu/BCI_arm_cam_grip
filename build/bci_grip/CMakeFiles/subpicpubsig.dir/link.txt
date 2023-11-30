@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libsubpicpubsig.so -o /home/sd/catkin_ws/devel/lib/libsubpicpubsig.so CMakeFiles/subpicpubsig.dir/src/subpicpubsig.cpp.o 
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libsubpicpubsig.so -o /home/sd/BCI_arm_cam_grip/devel/lib/libsubpicpubsig.so CMakeFiles/subpicpubsig.dir/src/subpicpubsig.cpp.o 

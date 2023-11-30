@@ -121,16 +121,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> >
   : TrueType
   { };
@@ -138,6 +128,16 @@ struct IsMessage< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocato
 template <class ContainerAllocator>
 struct IsMessage< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::robotiq_ft_sensor::sensor_accessorRequest_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

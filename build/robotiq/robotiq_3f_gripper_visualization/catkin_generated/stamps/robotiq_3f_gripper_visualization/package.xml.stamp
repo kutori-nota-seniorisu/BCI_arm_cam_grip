@@ -10,5 +10,6 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
+  <exec_depend>xacro</exec_depend>
 
 </package>

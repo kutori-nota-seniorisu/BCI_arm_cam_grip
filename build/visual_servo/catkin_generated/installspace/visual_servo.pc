@@ -1,0 +1,8 @@
+prefix=/home/sd/BCI_arm_cam_grip/install
+
+Name: visual_servo
+Description: Description of visual_servo
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy std_msgs message_runtime

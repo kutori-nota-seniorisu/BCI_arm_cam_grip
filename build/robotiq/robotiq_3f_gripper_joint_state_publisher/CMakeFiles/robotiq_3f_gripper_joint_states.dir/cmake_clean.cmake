@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states.pdb"
   "CMakeFiles/robotiq_3f_gripper_joint_states.dir/src/robotiq_3f_gripper_joint_states.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states.pdb"
-  "/home/sd/catkin_ws/devel/lib/robotiq_3f_gripper_joint_state_publisher/robotiq_3f_gripper_joint_states"
 )
 
 # Per-language clean rules from dependency scanning.

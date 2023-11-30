@@ -25,7 +25,7 @@ void on_mouse(int event, int x, int y, int flags, void* ustc)
 
 	if (down == true && event == CV_EVENT_MOUSEMOVE)    //右键按下且鼠标移动
 	{
-		curpt = cvPoint(x, y);
+		curpt = Point(x, y);
 		line(src, prept, curpt, Scalar(255, 0, 0), 5);
 		waitKey(5);        //可以解决画图时卡顿的问题
 		imshow("src", src);
@@ -36,9 +36,9 @@ void on_mouse(int event, int x, int y, int flags, void* ustc)
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "test_pos");
-	src = imread("/home/edifier/code/catkin_ws/src/bci_grip/src/pic/imgcolor000.jpg", 1);
+	src = imread("/home/sd/BCI_arm_cam_grip/src/bci_grip/src/pic/imgcolor000.jpg", 1);
 
-	cvNamedWindow("src");
+	namedWindow("src");
 	cvSetMouseCallback("src", on_mouse, 0);//关键内置函数
 
 	imshow("src", src);
@@ -129,7 +129,6 @@ int main(int argc, char** argv)
         }
     }
 
-	cvWaitKey(0);
-	cvDestroyAllWindows();
+	waitKey(0);
 	return 0;
 }

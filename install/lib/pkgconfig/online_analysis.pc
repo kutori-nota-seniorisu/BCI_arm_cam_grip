@@ -1,8 +1,0 @@
-prefix=/home/sd/catkin_ws/install
-
-Name: online_analysis
-Description: Description of online_analysis
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

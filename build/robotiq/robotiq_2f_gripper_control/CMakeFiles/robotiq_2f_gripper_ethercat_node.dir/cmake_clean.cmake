@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robotiq_2f_gripper_ethercat_node.dir/src/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.pdb"
   "CMakeFiles/robotiq_2f_gripper_ethercat_node.dir/src/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_client.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.pdb"
-  "/home/sd/catkin_ws/devel/lib/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node"
+  "CMakeFiles/robotiq_2f_gripper_ethercat_node.dir/src/robotiq_2f_gripper_control/robotiq_2f_gripper_ethercat_node.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/robotiq_3f_rviz_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/robotiq_3f_rviz_autogen.dir/ParseCache.txt"
   "robotiq_3f_rviz_autogen"
-  "CMakeFiles/robotiq_3f_rviz_autogen.dir/AutogenOldSettings.cmake"
-  "CMakeFiles/robotiq_3f_rviz.dir/src/robotiq_3f_rviz.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_3f_rviz.pdb"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_3f_rviz.so"
   "CMakeFiles/robotiq_3f_rviz.dir/robotiq_3f_rviz_autogen/mocs_compilation.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_3f_rviz.pdb"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_3f_rviz.so"
+  "CMakeFiles/robotiq_3f_rviz.dir/src/robotiq_3f_rviz.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

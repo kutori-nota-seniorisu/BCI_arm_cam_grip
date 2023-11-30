@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/bci_grip/col_align_dep"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/bci_grip/col_align_dep.pdb"
   "CMakeFiles/col_align_dep.dir/src/col_align_dep.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/bci_grip/col_align_dep.pdb"
-  "/home/sd/catkin_ws/devel/lib/bci_grip/col_align_dep"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/tutorial-franka-coppeliasim-dual-arm"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/tutorial-franka-coppeliasim-dual-arm.pdb"
   "CMakeFiles/tutorial-franka-coppeliasim-dual-arm.dir/tutorial/franka/coppeliasim/tutorial-franka-coppeliasim-dual-arm.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/tutorial-franka-coppeliasim-dual-arm.pdb"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/tutorial-franka-coppeliasim-dual-arm"
 )
 
 # Per-language clean rules from dependency scanning.

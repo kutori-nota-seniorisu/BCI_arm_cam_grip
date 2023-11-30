@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/KltPoint.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/KltPoints.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/KltSettings.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSettings.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSite.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSites.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/msg/TrackerSettings.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/visp_tracker/srv/Init.js"
   "CMakeFiles/visp_tracker_generate_messages_nodejs"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSettings.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/KltPoints.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSite.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/KltPoint.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/MovingEdgeSites.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/TrackerSettings.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/msg/KltSettings.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/visp_tracker/srv/Init.js"
 )
 
 # Per-language clean rules from dependency scanning.

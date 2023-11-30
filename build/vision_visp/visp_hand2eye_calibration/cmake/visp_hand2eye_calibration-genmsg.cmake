@@ -2,7 +2,7 @@
 
 message(STATUS "visp_hand2eye_calibration: 1 messages, 3 services")
 
-set(MSG_I_FLAGS "-Ivisp_hand2eye_calibration:/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ivisp_hand2eye_calibration:/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,24 +17,24 @@ add_custom_target(visp_hand2eye_calibration_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_custom_target(_visp_hand2eye_calibration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" "geometry_msgs/Vector3:geometry_msgs/Transform:geometry_msgs/Quaternion:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" "geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Transform:geometry_msgs/Vector3"
 )
 
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_custom_target(_visp_hand2eye_calibration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" "geometry_msgs/Transform:geometry_msgs/Quaternion:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" "geometry_msgs/Quaternion:geometry_msgs/Vector3:geometry_msgs/Transform"
 )
 
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_custom_target(_visp_hand2eye_calibration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" "geometry_msgs/Vector3:std_msgs/Header:geometry_msgs/Transform:geometry_msgs/Quaternion:visp_hand2eye_calibration/TransformArray"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" "geometry_msgs/Transform:std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Vector3:visp_hand2eye_calibration/TransformArray"
 )
 
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_custom_target(_visp_hand2eye_calibration_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_hand2eye_calibration" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" ""
 )
 
 #
@@ -44,27 +44,27 @@ add_custom_target(_visp_hand2eye_calibration_generate_messages_check_deps_${_fil
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 
 ### Generating Services
 _generate_srv_cpp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_cpp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_cpp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_hand2eye_calibration
@@ -82,13 +82,13 @@ add_custom_target(visp_hand2eye_calibration_generate_messages_cpp
 add_dependencies(visp_hand2eye_calibration_generate_messages visp_hand2eye_calibration_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_cpp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_cpp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_cpp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_cpp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -101,27 +101,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS visp_hand2eye_calibration_generate_
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_hand2eye_calibration
 )
 
 ### Generating Services
 _generate_srv_eus(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_eus(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_eus(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_hand2eye_calibration
@@ -139,13 +139,13 @@ add_custom_target(visp_hand2eye_calibration_generate_messages_eus
 add_dependencies(visp_hand2eye_calibration_generate_messages visp_hand2eye_calibration_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_eus _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_eus _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_eus _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_eus _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -158,27 +158,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS visp_hand2eye_calibration_generate_
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 
 ### Generating Services
 _generate_srv_lisp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_lisp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_lisp(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_hand2eye_calibration
@@ -196,13 +196,13 @@ add_custom_target(visp_hand2eye_calibration_generate_messages_lisp
 add_dependencies(visp_hand2eye_calibration_generate_messages visp_hand2eye_calibration_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_lisp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_lisp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_lisp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_lisp _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -215,27 +215,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS visp_hand2eye_calibration_generate_
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_hand2eye_calibration
 )
 
 ### Generating Services
 _generate_srv_nodejs(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_nodejs(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_nodejs(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_hand2eye_calibration
@@ -253,13 +253,13 @@ add_custom_target(visp_hand2eye_calibration_generate_messages_nodejs
 add_dependencies(visp_hand2eye_calibration_generate_messages visp_hand2eye_calibration_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_nodejs _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_nodejs _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_nodejs _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_nodejs _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -272,27 +272,27 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS visp_hand2eye_calibration_generate_
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration
 )
 
 ### Generating Services
 _generate_srv_py(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_py(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration
 )
 _generate_srv_py(visp_hand2eye_calibration
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration
@@ -310,13 +310,13 @@ add_custom_target(visp_hand2eye_calibration_generate_messages_py
 add_dependencies(visp_hand2eye_calibration_generate_messages visp_hand2eye_calibration_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/msg/TransformArray.msg" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_py _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_py _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/compute_effector_camera_quick.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_py _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
+get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/srv/reset.srv" NAME_WE)
 add_dependencies(visp_hand2eye_calibration_generate_messages_py _visp_hand2eye_calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -397,7 +397,7 @@ if(TARGET std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python3\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_hand2eye_calibration

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_ft_sensor/rq_sensor"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_ft_sensor/rq_sensor.pdb"
   "CMakeFiles/rq_sensor.dir/nodes/rq_sensor.cpp.o"
   "CMakeFiles/rq_sensor.dir/src/rq_sensor_com.cpp.o"
   "CMakeFiles/rq_sensor.dir/src/rq_sensor_state.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/robotiq_ft_sensor/rq_sensor.pdb"
-  "/home/sd/catkin_ws/devel/lib/robotiq_ft_sensor/rq_sensor"
 )
 
 # Per-language clean rules from dependency scanning.

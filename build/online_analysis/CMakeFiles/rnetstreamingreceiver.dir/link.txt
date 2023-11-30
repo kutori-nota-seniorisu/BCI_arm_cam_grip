@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,librnetstreamingreceiver.so -o /home/sd/BCI_arm_cam_grip/devel/lib/librnetstreamingreceiver.so CMakeFiles/rnetstreamingreceiver.dir/src/rnetstreamingreceiver.cpp.o 

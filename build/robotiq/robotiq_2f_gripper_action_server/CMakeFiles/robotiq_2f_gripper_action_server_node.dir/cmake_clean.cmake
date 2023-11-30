@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/robotiq_2f_gripper_action_server_node.dir/src/robotiq_2f_gripper_action_server_node.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node.pdb"
   "CMakeFiles/robotiq_2f_gripper_action_server_node.dir/src/robotiq_2f_gripper_action_server.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node.pdb"
-  "/home/sd/catkin_ws/devel/lib/robotiq_2f_gripper_action_server/robotiq_2f_gripper_action_server_node"
+  "CMakeFiles/robotiq_2f_gripper_action_server_node.dir/src/robotiq_2f_gripper_action_server_node.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

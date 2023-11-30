@@ -109,16 +109,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::visp_ros::BlobTracker_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::visp_ros::BlobTracker_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::visp_ros::BlobTracker_<ContainerAllocator> >
   : TrueType
   { };
@@ -126,6 +116,16 @@ struct IsMessage< ::visp_ros::BlobTracker_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::visp_ros::BlobTracker_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_ros::BlobTracker_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_ros::BlobTracker_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

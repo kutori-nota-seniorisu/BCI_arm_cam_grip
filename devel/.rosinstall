@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/sd/catkin_ws/devel/setup.sh
+    local-name: /home/sd/BCI_arm_cam_grip/devel/setup.sh

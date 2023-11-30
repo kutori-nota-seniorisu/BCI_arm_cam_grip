@@ -67,14 +67,14 @@ set(bci_grip_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(bci_grip_SOURCE_PREFIX /home/sd/catkin_ws/src/bci_grip)
-  set(bci_grip_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(bci_grip_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/bci_grip)
+  set(bci_grip_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(bci_grip_INSTALL_PREFIX "")
   set(bci_grip_PREFIX ${bci_grip_DEVEL_PREFIX})
 else()
   set(bci_grip_SOURCE_PREFIX "")
   set(bci_grip_DEVEL_PREFIX "")
-  set(bci_grip_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(bci_grip_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(bci_grip_PREFIX ${bci_grip_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(bci_grip_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/sd/catkin_ws/src/bci_grip/include;/usr/include/eigen3 " STREQUAL " ")
+if(NOT "/home/sd/BCI_arm_cam_grip/src/bci_grip/include;/usr/include/eigen3 " STREQUAL " ")
   set(bci_grip_INCLUDE_DIRS "")
-  set(_include_dirs "/home/sd/catkin_ws/src/bci_grip/include;/usr/include/eigen3")
+  set(_include_dirs "/home/sd/BCI_arm_cam_grip/src/bci_grip/include;/usr/include/eigen3")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/sd/catkin_ws/src/bci_grip/include;/usr/include/eigen3 " STREQUAL "
         message(FATAL_ERROR "Project 'bci_grip' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'bci_grip' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/catkin_ws/src/bci_grip/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'bci_grip' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/BCI_arm_cam_grip/src/bci_grip/${idir}'.  ${_report}")
     endif()
     _list_append_unique(bci_grip_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/devel/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(bci_grip_LIBRARIES ${bci_grip_LIBRARIES})
 
   _list_append_unique(bci_grip_LIBRARY_DIRS ${${bci_grip_dep}_LIBRARY_DIRS})
-  list(APPEND bci_grip_EXPORTED_TARGETS ${${bci_grip_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(bci_grip_EXPORTED_TARGETS ${${bci_grip_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "bci_grip-msg-extras.cmake")

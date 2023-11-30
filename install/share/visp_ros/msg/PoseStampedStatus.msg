@@ -1,2 +1,0 @@
-int8 status
-geometry_msgs/PoseStamped pose_stamped

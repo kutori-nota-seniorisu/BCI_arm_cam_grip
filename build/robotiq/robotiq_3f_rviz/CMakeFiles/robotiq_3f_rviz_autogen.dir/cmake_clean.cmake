@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "robotiq_3f_rviz_autogen"
-  "CMakeFiles/robotiq_3f_rviz_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/robotiq_3f_rviz_autogen"
+  "robotiq_3f_rviz_autogen/mocs_compilation.cpp"
 )
 
 # Per-language clean rules from dependency scanning.

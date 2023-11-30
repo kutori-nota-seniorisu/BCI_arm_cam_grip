@@ -67,14 +67,14 @@ set(visp_bridge_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(visp_bridge_SOURCE_PREFIX /home/sd/catkin_ws/src/vision_visp/visp_bridge)
-  set(visp_bridge_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(visp_bridge_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_bridge)
+  set(visp_bridge_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(visp_bridge_INSTALL_PREFIX "")
   set(visp_bridge_PREFIX ${visp_bridge_DEVEL_PREFIX})
 else()
   set(visp_bridge_SOURCE_PREFIX "")
   set(visp_bridge_DEVEL_PREFIX "")
-  set(visp_bridge_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(visp_bridge_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(visp_bridge_PREFIX ${visp_bridge_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(visp_bridge_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/sd/catkin_ws/src/vision_visp/visp_bridge/include;/usr/include;/opt/ros/melodic/include;/usr/include/opencv;/usr/include/eigen3;/usr/include/libxml2;/usr/include/OGRE;/usr/include/ois " STREQUAL " ")
+if(NOT "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_bridge/include;/usr/include;/opt/ros/noetic/include;/usr/include/opencv4;/usr/include/eigen3;/usr/include/libxml2;/usr/include/pcl-1.10;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/include/libusb-1.0;/usr/include/OGRE;/usr/include/ois;/usr/local/include " STREQUAL " ")
   set(visp_bridge_INCLUDE_DIRS "")
-  set(_include_dirs "/home/sd/catkin_ws/src/vision_visp/visp_bridge/include;/usr/include;/opt/ros/melodic/include;/usr/include/opencv;/usr/include/eigen3;/usr/include/libxml2;/usr/include/OGRE;/usr/include/ois")
+  set(_include_dirs "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_bridge/include;/usr/include;/opt/ros/noetic/include;/usr/include/opencv4;/usr/include/eigen3;/usr/include/libxml2;/usr/include/pcl-1.10;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/include/libusb-1.0;/usr/include/OGRE;/usr/include/ois;/usr/local/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/visp_bridge " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/sd/catkin_ws/src/vision_visp/visp_bridge/include;/usr/include;/opt
         message(FATAL_ERROR "Project 'visp_bridge' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'visp_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/catkin_ws/src/vision_visp/visp_bridge/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'visp_bridge' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_bridge/${idir}'.  ${_report}")
     endif()
     _list_append_unique(visp_bridge_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "visp_bridge;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/opt/ros/melodic/lib/libvisp_vs.so.3.5.0;/opt/ros/melodic/lib/libvisp_visual_features.so.3.5.0;/opt/ros/melodic/lib/libvisp_vision.so.3.5.0;/opt/ros/melodic/lib/libvisp_tt_mi.so.3.5.0;/opt/ros/melodic/lib/libvisp_tt.so.3.5.0;/opt/ros/melodic/lib/libvisp_me.so.3.5.0;/opt/ros/melodic/lib/libvisp_mbt.so.3.5.0;/opt/ros/melodic/lib/libvisp_klt.so.3.5.0;/opt/ros/melodic/lib/libvisp_blob.so.3.5.0;/opt/ros/melodic/lib/libvisp_sensor.so.3.5.0;/opt/ros/melodic/lib/libvisp_robot.so.3.5.0;/opt/ros/melodic/lib/libvisp_io.so.3.5.0;/opt/ros/melodic/lib/libvisp_imgproc.so.3.5.0;/opt/ros/melodic/lib/libvisp_gui.so.3.5.0;/opt/ros/melodic/lib/libvisp_detection.so.3.5.0;/opt/ros/melodic/lib/libvisp_core.so.3.5.0;/opt/ros/melodic/lib/libvisp_ar.so.3.5.0")
+set(libraries "visp_bridge;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0;/opt/ros/noetic/lib/libvisp_vs.so.3.6.1;/opt/ros/noetic/lib/libvisp_visual_features.so.3.6.1;/opt/ros/noetic/lib/libvisp_vision.so.3.6.1;/opt/ros/noetic/lib/libvisp_tt_mi.so.3.6.1;/opt/ros/noetic/lib/libvisp_tt.so.3.6.1;/opt/ros/noetic/lib/libvisp_me.so.3.6.1;/opt/ros/noetic/lib/libvisp_mbt.so.3.6.1;/opt/ros/noetic/lib/libvisp_klt.so.3.6.1;/opt/ros/noetic/lib/libvisp_blob.so.3.6.1;/opt/ros/noetic/lib/libvisp_sensor.so.3.6.1;/opt/ros/noetic/lib/libvisp_robot.so.3.6.1;/opt/ros/noetic/lib/libvisp_io.so.3.6.1;/opt/ros/noetic/lib/libvisp_imgproc.so.3.6.1;/opt/ros/noetic/lib/libvisp_gui.so.3.6.1;/opt/ros/noetic/lib/libvisp_detection.so.3.6.1;/opt/ros/noetic/lib/libvisp_core.so.3.6.1;/opt/ros/noetic/lib/libvisp_ar.so.3.6.1")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/devel/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(visp_bridge_LIBRARIES ${visp_bridge_LIBRARIES})
 
   _list_append_unique(visp_bridge_LIBRARY_DIRS ${${visp_bridge_dep}_LIBRARY_DIRS})
-  list(APPEND visp_bridge_EXPORTED_TARGETS ${${visp_bridge_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(visp_bridge_EXPORTED_TARGETS ${${visp_bridge_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

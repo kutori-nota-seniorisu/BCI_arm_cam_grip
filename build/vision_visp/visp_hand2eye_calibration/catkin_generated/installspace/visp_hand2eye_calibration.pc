@@ -1,8 +1,8 @@
-prefix=/home/sd/catkin_ws/install
+prefix=/home/sd/BCI_arm_cam_grip/install
 
 Name: visp_hand2eye_calibration
 Description: Description of visp_hand2eye_calibration
-Version: 0.13.0
+Version: 0.13.1
 Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
 Requires: geometry_msgs message_runtime roscpp sensor_msgs std_msgs

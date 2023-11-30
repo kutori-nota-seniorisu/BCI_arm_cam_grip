@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/robotiq/robotiq_modbus_tcp
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_modbus_tcp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/sd/catkin_ws/build/robotiq/robotiq_modbus_tcp/catkin_generated/safe_execute_install.cmake")
+  include("/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_modbus_tcp/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcp.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcp.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_tcp/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcpConfig.cmake"
-    "/home/sd/catkin_ws/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcpConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcpConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_modbus_tcp/catkin_generated/installspace/robotiq_modbus_tcpConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_tcp" TYPE FILE FILES "/home/sd/catkin_ws/src/robotiq/robotiq_modbus_tcp/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_modbus_tcp" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_modbus_tcp/package.xml")
 endif()
 

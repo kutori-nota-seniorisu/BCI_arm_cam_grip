@@ -22,7 +22,7 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:klt_points_positions __klt_points_positions) (let (r) (dotimes (i 0) (push (instance visp_tracker::KltPoint :init) r)) r))
+    ((:klt_points_positions __klt_points_positions) ())
     )
    (send-super :init)
    (setq _header __header)

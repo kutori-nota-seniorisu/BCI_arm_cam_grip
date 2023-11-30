@@ -129,22 +129,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_tracker::MovingEdgeSettings_<ContainerAllocator> const>
   : TrueType
   { };
 

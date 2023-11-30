@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.js"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_nodejs"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/msg/_TransformArray.py"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/msg/__init__.py"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/srv/__init__.py"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/srv/_compute_effector_camera.py"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/srv/_compute_effector_camera_quick.py"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/visp_hand2eye_calibration/srv/_reset.py"
   "CMakeFiles/visp_hand2eye_calibration_generate_messages_py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/msg/_TransformArray.py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/srv/_compute_effector_camera_quick.py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/srv/_compute_effector_camera.py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/srv/_reset.py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/msg/__init__.py"
-  "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/visp_hand2eye_calibration/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

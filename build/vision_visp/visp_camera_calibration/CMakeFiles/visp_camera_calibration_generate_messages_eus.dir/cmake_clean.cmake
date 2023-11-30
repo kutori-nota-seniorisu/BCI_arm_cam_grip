@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/manifest.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/msg/CalibPoint.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/msg/CalibPointArray.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/msg/ImageAndPoints.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/msg/ImagePoint.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/visp_camera_calibration/srv/calibrate.l"
   "CMakeFiles/visp_camera_calibration_generate_messages_eus"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/msg/ImagePoint.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/msg/CalibPoint.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/msg/CalibPointArray.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/msg/ImageAndPoints.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/srv/calibrate.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/visp_camera_calibration/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

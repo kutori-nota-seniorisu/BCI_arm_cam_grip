@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/bci_grip/test_position"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/bci_grip/test_position.pdb"
   "CMakeFiles/test_position.dir/src/test_position.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/bci_grip/test_position.pdb"
-  "/home/sd/catkin_ws/devel/lib/bci_grip/test_position"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -19,7 +19,7 @@
 (defmethod visp_camera_calibration::CalibPointArray
   (:init
    (&key
-    ((:points __points) (let (r) (dotimes (i 0) (push (instance visp_camera_calibration::CalibPoint :init) r)) r))
+    ((:points __points) ())
     )
    (send-super :init)
    (setq _points __points)

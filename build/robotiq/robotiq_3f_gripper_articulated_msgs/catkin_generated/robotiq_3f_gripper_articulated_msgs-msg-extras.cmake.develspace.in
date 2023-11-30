@@ -1,2 +1,2 @@
-set(robotiq_3f_gripper_articulated_msgs_MESSAGE_FILES "/home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotInput.msg;/home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotOutput.msg")
+set(robotiq_3f_gripper_articulated_msgs_MESSAGE_FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotInput.msg;/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotOutput.msg")
 set(robotiq_3f_gripper_articulated_msgs_SERVICE_FILES "")

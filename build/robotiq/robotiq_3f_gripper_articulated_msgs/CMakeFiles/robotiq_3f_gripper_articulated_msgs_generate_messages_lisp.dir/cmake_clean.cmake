@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotInput.lisp"
+  "/home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotOutput.lisp"
   "CMakeFiles/robotiq_3f_gripper_articulated_msgs_generate_messages_lisp"
-  "/home/sd/catkin_ws/devel/share/common-lisp/ros/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotOutput.lisp"
-  "/home/sd/catkin_ws/devel/share/common-lisp/ros/robotiq_3f_gripper_articulated_msgs/msg/Robotiq3FGripperRobotInput.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

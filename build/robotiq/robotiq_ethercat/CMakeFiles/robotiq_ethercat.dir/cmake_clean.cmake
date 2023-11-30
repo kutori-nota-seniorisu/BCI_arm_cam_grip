@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_ethercat.pdb"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_ethercat.so"
   "CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_ethercat.pdb"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_ethercat.so"
 )
 
 # Per-language clean rules from dependency scanning.

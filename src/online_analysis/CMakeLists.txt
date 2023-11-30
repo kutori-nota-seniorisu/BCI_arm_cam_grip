@@ -116,8 +116,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
+	include
+	${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -125,16 +125,28 @@ include_directories(
 #   src/${PROJECT_NAME}/online_analysis.cpp
 # )
 
+add_library(rnetstreamingreceiver
+	include/online_analysis/rnetstreamingreceiver.h
+	src/rnetstreamingreceiver.cpp
+)
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_dependencies(rnetstreamingreceiver ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/online_analysis_node.cpp)
+add_executable(datareceive src/datareceive.cpp)
 
+add_executable(test_talker src/test_talker.cpp)
+target_link_libraries(test_talker ${catkin_LIBRARIES})
+add_executable(test_listener src/test_listener.cpp)
+target_link_libraries(test_listener ${catkin_LIBRARIES})
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -150,6 +162,11 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+target_link_libraries(datareceive
+	rnetstreamingreceiver
+	${catkin_LIBRARIES}
+)
+
 #############
 ## Install ##
 #############
@@ -164,11 +181,12 @@ include_directories(
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
 catkin_install_python(PROGRAMS
-	scripts/chatsub.py
-	scripts/chatpub.py
-  scripts/onlineanalysis.py
-  scripts/eeg_pub.py
-  scripts/key_read.py
+	scripts/eeg_pub_auto.py
+	scripts/eeg_pub_manual.py
+	scripts/onlineanalysis.py
+	scripts/key_read.py
+	scripts/test_pub.py
+	scripts/test_sub.py
 	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

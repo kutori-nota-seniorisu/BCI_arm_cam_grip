@@ -1,0 +1,2 @@
+set(visual_servo_MESSAGE_FILES "/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/circle1.msg;/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/pbvs_circles.msg;/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/circle.msg;/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/joint_positon.msg;/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/toolposeChange.msg;/home/sd/BCI_arm_cam_grip/src/visual_servo/msg/RobotRelative.msg")
+set(visual_servo_SERVICE_FILES "")

@@ -62,7 +62,7 @@ class sensor_accessorRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.command.length;
+    length += _getByteLength(object.command);
     return length + 5;
   }
 
@@ -166,7 +166,7 @@ class sensor_accessorResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.res.length;
+    length += _getByteLength(object.res);
     return length + 5;
   }
 

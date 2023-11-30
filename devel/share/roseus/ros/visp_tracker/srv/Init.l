@@ -119,8 +119,8 @@
    (setq _initialization_succeed __initialization_succeed)
    self)
   (:initialization_succeed
-   (&optional __initialization_succeed)
-   (if __initialization_succeed (setq _initialization_succeed __initialization_succeed)) _initialization_succeed)
+   (&optional (__initialization_succeed :null))
+   (if (not (eq __initialization_succeed :null)) (setq _initialization_succeed __initialization_succeed)) _initialization_succeed)
   (:serialization-length
    ()
    (+

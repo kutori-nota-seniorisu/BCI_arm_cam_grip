@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_plugins.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_plugins.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_articulated_gazebo_plugins/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_pluginsConfig.cmake"
-    "/home/sd/catkin_ws/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_pluginsConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_pluginsConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/catkin_generated/installspace/robotiq_3f_gripper_articulated_gazebo_pluginsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_articulated_gazebo_plugins" TYPE FILE FILES "/home/sd/catkin_ws/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_3f_gripper_articulated_gazebo_plugins" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_3f_gripper_articulated_gazebo_plugins/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,16 +59,19 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins/libRobotiqHandPlugin.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins" TYPE SHARED_LIBRARY FILES "/home/sd/catkin_ws/devel/lib/libRobotiqHandPlugin.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins" TYPE SHARED_LIBRARY FILES "/home/sd/BCI_arm_cam_grip/devel/lib/libRobotiqHandPlugin.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins/libRobotiqHandPlugin.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins/libRobotiqHandPlugin.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins/libRobotiqHandPlugin.so"
-         OLD_RPATH "/usr/lib/x86_64-linux-gnu/gazebo-9/plugins:/opt/ros/melodic/lib:"
+         OLD_RPATH "/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/robotiq_3f_gripper_articulated_gazebo_plugins/plugins/libRobotiqHandPlugin.so")
     endif()
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 

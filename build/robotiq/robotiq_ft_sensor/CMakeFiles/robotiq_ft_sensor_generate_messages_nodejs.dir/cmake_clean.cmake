@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/robotiq_ft_sensor/msg/ft_sensor.js"
+  "/home/sd/BCI_arm_cam_grip/devel/share/gennodejs/ros/robotiq_ft_sensor/srv/sensor_accessor.js"
   "CMakeFiles/robotiq_ft_sensor_generate_messages_nodejs"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/msg/ft_sensor.js"
-  "/home/sd/catkin_ws/devel/share/gennodejs/ros/robotiq_ft_sensor/srv/sensor_accessor.js"
 )
 
 # Per-language clean rules from dependency scanning.

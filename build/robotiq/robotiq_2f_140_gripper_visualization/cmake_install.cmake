@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/robotiq/robotiq_2f_140_gripper_visualization
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_140_gripper_visualization
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualization.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualization.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualizationConfig.cmake"
-    "/home/sd/catkin_ws/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualizationConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualizationConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_2f_140_gripper_visualization/catkin_generated/installspace/robotiq_2f_140_gripper_visualizationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE FILE FILES "/home/sd/catkin_ws/src/robotiq/robotiq_2f_140_gripper_visualization/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_140_gripper_visualization/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE DIRECTORY FILES "/home/sd/catkin_ws/src/robotiq/robotiq_2f_140_gripper_visualization/meshes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE DIRECTORY FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_140_gripper_visualization/meshes")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE DIRECTORY FILES "/home/sd/catkin_ws/src/robotiq/robotiq_2f_140_gripper_visualization/urdf")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_2f_140_gripper_visualization" TYPE DIRECTORY FILES "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_140_gripper_visualization/urdf")
 endif()
 

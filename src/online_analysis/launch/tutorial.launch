@@ -1,4 +1,0 @@
-<launch>
-    <node pkg="online_analysis" name="talker" type="talker.py" output="screen" />
-    <node pkg="online_analysis" name="listener" type="listener.py" output="screen" />
-</launch>

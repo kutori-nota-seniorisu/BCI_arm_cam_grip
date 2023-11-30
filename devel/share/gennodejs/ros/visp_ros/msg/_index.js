@@ -1,14 +1,14 @@
 
 "use strict";
 
-let ProjectedPoint = require('./ProjectedPoint.js');
-let PoseStampedStatus = require('./PoseStampedStatus.js');
-let ImagePoint = require('./ImagePoint.js');
 let BlobTracker = require('./BlobTracker.js');
+let ImagePoint = require('./ImagePoint.js');
+let PoseStampedStatus = require('./PoseStampedStatus.js');
+let ProjectedPoint = require('./ProjectedPoint.js');
 
 module.exports = {
-  ProjectedPoint: ProjectedPoint,
-  PoseStampedStatus: PoseStampedStatus,
-  ImagePoint: ImagePoint,
   BlobTracker: BlobTracker,
+  ImagePoint: ImagePoint,
+  PoseStampedStatus: PoseStampedStatus,
+  ProjectedPoint: ProjectedPoint,
 };

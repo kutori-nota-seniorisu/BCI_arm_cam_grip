@@ -71,22 +71,22 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> >
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> const>
-  : TrueType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> >
   : TrueType
   { };
 
 template <class ContainerAllocator>
 struct IsMessage< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_hand2eye_calibration::compute_effector_cameraRequest_<ContainerAllocator> const>
   : TrueType
   { };
 

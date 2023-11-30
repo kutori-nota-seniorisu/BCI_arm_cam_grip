@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/libtrackerNodelet.pdb"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/libtrackerNodelet.so"
   "CMakeFiles/trackerNodelet.dir/src/nodelets/client.cpp.o"
   "CMakeFiles/trackerNodelet.dir/src/nodelets/tracker.cpp.o"
   "CMakeFiles/trackerNodelet.dir/src/nodelets/viewer.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/libtrackerNodelet.pdb"
-  "/home/sd/catkin_ws/devel/lib/libtrackerNodelet.so"
 )
 
 # Per-language clean rules from dependency scanning.

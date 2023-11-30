@@ -67,14 +67,14 @@ set(visp_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(visp_ros_SOURCE_PREFIX /home/sd/catkin_ws/src/visp_ros)
-  set(visp_ros_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(visp_ros_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/visp_ros)
+  set(visp_ros_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(visp_ros_INSTALL_PREFIX "")
   set(visp_ros_PREFIX ${visp_ros_DEVEL_PREFIX})
 else()
   set(visp_ros_SOURCE_PREFIX "")
   set(visp_ros_DEVEL_PREFIX "")
-  set(visp_ros_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(visp_ros_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(visp_ros_PREFIX ${visp_ros_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(visp_ros_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/sd/catkin_ws/devel/include;/home/sd/catkin_ws/src/visp_ros/include;/opt/ros/melodic/include;/usr/include;/usr/include/opencv;/usr/include/eigen3;/usr/include/libxml2;/usr/include/OGRE;/usr/include/ois " STREQUAL " ")
+if(NOT "/home/sd/BCI_arm_cam_grip/devel/include;/home/sd/BCI_arm_cam_grip/src/visp_ros/include;/opt/ros/noetic/include;/usr/include/opencv4;/usr/include/eigen3;/usr/include/libxml2;/usr/include;/usr/include/pcl-1.10;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/include/libusb-1.0;/usr/include/OGRE;/usr/include/ois;/usr/local/include " STREQUAL " ")
   set(visp_ros_INCLUDE_DIRS "")
-  set(_include_dirs "/home/sd/catkin_ws/devel/include;/home/sd/catkin_ws/src/visp_ros/include;/opt/ros/melodic/include;/usr/include;/usr/include/opencv;/usr/include/eigen3;/usr/include/libxml2;/usr/include/OGRE;/usr/include/ois")
+  set(_include_dirs "/home/sd/BCI_arm_cam_grip/devel/include;/home/sd/BCI_arm_cam_grip/src/visp_ros/include;/opt/ros/noetic/include;/usr/include/opencv4;/usr/include/eigen3;/usr/include/libxml2;/usr/include;/usr/include/pcl-1.10;/usr/include/vtk-7.1;/usr/include/freetype2;/usr/include/x86_64-linux-gnu;/usr/include/ni;/usr/include/openni2;/usr/include/libusb-1.0;/usr/include/OGRE;/usr/include/ois;/usr/local/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/visp_ros " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/sd/catkin_ws/devel/include;/home/sd/catkin_ws/src/visp_ros/include
         message(FATAL_ERROR "Project 'visp_ros' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'visp_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/catkin_ws/src/visp_ros/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'visp_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/sd/BCI_arm_cam_grip/src/visp_ros/${idir}'.  ${_report}")
     endif()
     _list_append_unique(visp_ros_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "visp_ros;visp_ros_bebop2_visual_servo_nodelet;/opt/ros/melodic/lib/libvisp_vs.so.3.5.0;/opt/ros/melodic/lib/libvisp_visual_features.so.3.5.0;/opt/ros/melodic/lib/libvisp_vision.so.3.5.0;/opt/ros/melodic/lib/libvisp_tt_mi.so.3.5.0;/opt/ros/melodic/lib/libvisp_tt.so.3.5.0;/opt/ros/melodic/lib/libvisp_me.so.3.5.0;/opt/ros/melodic/lib/libvisp_mbt.so.3.5.0;/opt/ros/melodic/lib/libvisp_klt.so.3.5.0;/opt/ros/melodic/lib/libvisp_blob.so.3.5.0;/opt/ros/melodic/lib/libvisp_sensor.so.3.5.0;/opt/ros/melodic/lib/libvisp_robot.so.3.5.0;/opt/ros/melodic/lib/libvisp_io.so.3.5.0;/opt/ros/melodic/lib/libvisp_imgproc.so.3.5.0;/opt/ros/melodic/lib/libvisp_gui.so.3.5.0;/opt/ros/melodic/lib/libvisp_detection.so.3.5.0;/opt/ros/melodic/lib/libvisp_core.so.3.5.0;/opt/ros/melodic/lib/libvisp_ar.so.3.5.0")
+set(libraries "visp_ros;visp_ros_bebop2_visual_servo_nodelet;/opt/ros/noetic/lib/libvisp_vs.so.3.6.1;/opt/ros/noetic/lib/libvisp_visual_features.so.3.6.1;/opt/ros/noetic/lib/libvisp_vision.so.3.6.1;/opt/ros/noetic/lib/libvisp_tt_mi.so.3.6.1;/opt/ros/noetic/lib/libvisp_tt.so.3.6.1;/opt/ros/noetic/lib/libvisp_me.so.3.6.1;/opt/ros/noetic/lib/libvisp_mbt.so.3.6.1;/opt/ros/noetic/lib/libvisp_klt.so.3.6.1;/opt/ros/noetic/lib/libvisp_blob.so.3.6.1;/opt/ros/noetic/lib/libvisp_sensor.so.3.6.1;/opt/ros/noetic/lib/libvisp_robot.so.3.6.1;/opt/ros/noetic/lib/libvisp_io.so.3.6.1;/opt/ros/noetic/lib/libvisp_imgproc.so.3.6.1;/opt/ros/noetic/lib/libvisp_gui.so.3.6.1;/opt/ros/noetic/lib/libvisp_detection.so.3.6.1;/opt/ros/noetic/lib/libvisp_core.so.3.6.1;/opt/ros/noetic/lib/libvisp_ar.so.3.6.1")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/devel/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(visp_ros_LIBRARIES ${visp_ros_LIBRARIES})
 
   _list_append_unique(visp_ros_LIBRARY_DIRS ${${visp_ros_dep}_LIBRARY_DIRS})
-  list(APPEND visp_ros_EXPORTED_TARGETS ${${visp_ros_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(visp_ros_EXPORTED_TARGETS ${${visp_ros_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "visp_ros-msg-extras.cmake")

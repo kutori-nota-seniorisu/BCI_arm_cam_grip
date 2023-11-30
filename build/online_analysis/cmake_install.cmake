@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/online_analysis
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/online_analysis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,37 +38,41 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/online_analysis.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/online_analysis.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/online_analysis/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/online_analysisConfig.cmake"
-    "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/online_analysisConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/online_analysisConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/online_analysisConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/online_analysis" TYPE FILE FILES "/home/sd/catkin_ws/src/online_analysis/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/online_analysis" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/online_analysis/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/chatsub.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/eeg_pub_auto.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/chatpub.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/eeg_pub_manual.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/onlineanalysis.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/onlineanalysis.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/eeg_pub.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/key_read.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/online_analysis/catkin_generated/installspace/key_read.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/test_pub.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/online_analysis" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/online_analysis/catkin_generated/installspace/test_sub.py")
 endif()
 

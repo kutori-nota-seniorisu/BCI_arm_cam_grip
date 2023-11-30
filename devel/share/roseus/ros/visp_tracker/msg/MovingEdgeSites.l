@@ -22,7 +22,7 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:moving_edge_sites __moving_edge_sites) (let (r) (dotimes (i 0) (push (instance visp_tracker::MovingEdgeSite :init) r)) r))
+    ((:moving_edge_sites __moving_edge_sites) ())
     )
    (send-super :init)
    (setq _header __header)

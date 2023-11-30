@@ -25,7 +25,7 @@
    (&key
     ((:header __header) (instance std_msgs::Header :init))
     ((:image __image) (instance sensor_msgs::Image :init))
-    ((:points __points) (let (r) (dotimes (i 0) (push (instance visp_camera_calibration::ImagePoint :init) r)) r))
+    ((:points __points) ())
     )
    (send-super :init)
    (setq _header __header)

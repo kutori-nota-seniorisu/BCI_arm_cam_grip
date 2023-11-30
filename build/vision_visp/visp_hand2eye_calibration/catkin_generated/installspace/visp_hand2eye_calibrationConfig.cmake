@@ -67,14 +67,14 @@ set(visp_hand2eye_calibration_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(visp_hand2eye_calibration_SOURCE_PREFIX /home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration)
-  set(visp_hand2eye_calibration_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(visp_hand2eye_calibration_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration)
+  set(visp_hand2eye_calibration_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(visp_hand2eye_calibration_INSTALL_PREFIX "")
   set(visp_hand2eye_calibration_PREFIX ${visp_hand2eye_calibration_DEVEL_PREFIX})
 else()
   set(visp_hand2eye_calibration_SOURCE_PREFIX "")
   set(visp_hand2eye_calibration_DEVEL_PREFIX "")
-  set(visp_hand2eye_calibration_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(visp_hand2eye_calibration_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(visp_hand2eye_calibration_PREFIX ${visp_hand2eye_calibration_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/install/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(visp_hand2eye_calibration_LIBRARIES ${visp_hand2eye_calibration_LIBRARIES})
 
   _list_append_unique(visp_hand2eye_calibration_LIBRARY_DIRS ${${visp_hand2eye_calibration_dep}_LIBRARY_DIRS})
-  list(APPEND visp_hand2eye_calibration_EXPORTED_TARGETS ${${visp_hand2eye_calibration_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(visp_hand2eye_calibration_EXPORTED_TARGETS ${${visp_hand2eye_calibration_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "visp_hand2eye_calibration-msg-extras.cmake")

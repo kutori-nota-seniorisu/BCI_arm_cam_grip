@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
     //ros初始化
     ros::init(argc, argv, "bci_ur_actual");
     ros::NodeHandle n;
-    ros::Publisher GripSigPub = n.advertise<std_msgs::UInt16>("/GripSig", 50);
+    ros::Publisher GripSigPub = n.advertise<std_msgs::Bool>("/GripSig", 50);
     ros::Publisher GripSigPub1 = n.advertise<std_msgs::Bool>("/GripSig1", 1);
     std_msgs::UInt16 GripSigMsg;
     std_msgs::Bool GripSigMsg1;
@@ -225,6 +225,7 @@ int main(int argc, char** argv) {
                                             0, 3.14, 0;
             pose.clear();
             pose = {Pt_Base(0, 0) , Pt_Base(1, 0), Pt_Base(2, 0) + 0.17, 0, 3.14, 0};
+            ROS_INFO("Pose: %d, %d, %d", pose[0], pose[1], pose[2]);
             ROS_INFO("Pt_Base : %f, %f, %f", Pt_Base(0,0), Pt_Base(1, 0), Pt_Base(2, 0)); 
             rtde_control.servoL(pose, speed, acceleration, 2,  0.1, 1000);
             sleep(4);
@@ -258,7 +259,6 @@ int main(int argc, char** argv) {
             {
                 rtde_control.servoL(endPose3_3, speed, acceleration, 2,  0.1, 1000);
                 sleep(2);
-
             }
             //松开夹爪，准备进行下一次抓取
             GripperOutput.rPR = 0;

@@ -94,16 +94,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::visp_ros::PoseStampedStatus_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::visp_ros::PoseStampedStatus_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::visp_ros::PoseStampedStatus_<ContainerAllocator> >
   : TrueType
   { };
@@ -111,6 +101,16 @@ struct IsMessage< ::visp_ros::PoseStampedStatus_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::visp_ros::PoseStampedStatus_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_ros::PoseStampedStatus_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_ros::PoseStampedStatus_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

@@ -1,8 +1,0 @@
-prefix=/home/sd/catkin_ws/devel
-
-Name: qt_ros
-Description: Description of qt_ros
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

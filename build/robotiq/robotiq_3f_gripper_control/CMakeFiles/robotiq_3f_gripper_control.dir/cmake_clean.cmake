@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_3f_gripper_control.pdb"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_3f_gripper_control.so"
   "CMakeFiles/robotiq_3f_gripper_control.dir/src/robotiq_3f_gripper_control/robotiq_3f_gripper_api.cpp.o"
   "CMakeFiles/robotiq_3f_gripper_control.dir/src/robotiq_3f_gripper_control/robotiq_3f_gripper_diagnostics.cpp.o"
   "CMakeFiles/robotiq_3f_gripper_control.dir/src/robotiq_3f_gripper_control/robotiq_3f_gripper_hw_interface.cpp.o"
   "CMakeFiles/robotiq_3f_gripper_control.dir/src/robotiq_3f_gripper_control/robotiq_3f_gripper_ros.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_3f_gripper_control.pdb"
-  "/home/sd/catkin_ws/devel/lib/librobotiq_3f_gripper_control.so"
 )
 
 # Per-language clean rules from dependency scanning.

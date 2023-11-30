@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/robotiq_2f_gripper_control/manifest.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.l"
+  "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.l"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_eus"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_output.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/robotiq_2f_gripper_control/msg/Robotiq2FGripper_robot_input.l"
-  "/home/sd/catkin_ws/devel/share/roseus/ros/robotiq_2f_gripper_control/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

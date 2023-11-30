@@ -95,16 +95,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> >
   : TrueType
   { };
@@ -112,6 +102,16 @@ struct IsMessage< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocato
 template <class ContainerAllocator>
 struct IsMessage< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::visp_hand2eye_calibration::TransformArray_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

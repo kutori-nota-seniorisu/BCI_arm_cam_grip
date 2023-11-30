@@ -1,8 +1,8 @@
-prefix=/home/sd/catkin_ws/install
+prefix=/home/sd/BCI_arm_cam_grip/install
 
 Name: visp_tracker
 Description: Description of visp_tracker
-Version: 0.13.0
-Cflags: -I${prefix}/include -I/opt/ros/melodic/include -I/usr/include -I/usr/include/opencv -I/usr/include/eigen3 -I/usr/include/libxml2 -I/usr/include/OGRE -I/usr/include/ois
-Libs: -L${prefix}/lib -ltrackerNodelet -lvisp_tracker /opt/ros/melodic/lib/libvisp_vs.so.3.5.0 /opt/ros/melodic/lib/libvisp_visual_features.so.3.5.0 /opt/ros/melodic/lib/libvisp_vision.so.3.5.0 /opt/ros/melodic/lib/libvisp_tt_mi.so.3.5.0 /opt/ros/melodic/lib/libvisp_tt.so.3.5.0 /opt/ros/melodic/lib/libvisp_me.so.3.5.0 /opt/ros/melodic/lib/libvisp_mbt.so.3.5.0 /opt/ros/melodic/lib/libvisp_klt.so.3.5.0 /opt/ros/melodic/lib/libvisp_blob.so.3.5.0 /opt/ros/melodic/lib/libvisp_sensor.so.3.5.0 /opt/ros/melodic/lib/libvisp_robot.so.3.5.0 /opt/ros/melodic/lib/libvisp_io.so.3.5.0 /opt/ros/melodic/lib/libvisp_imgproc.so.3.5.0 /opt/ros/melodic/lib/libvisp_gui.so.3.5.0 /opt/ros/melodic/lib/libvisp_detection.so.3.5.0 /opt/ros/melodic/lib/libvisp_core.so.3.5.0 /opt/ros/melodic/lib/libvisp_ar.so.3.5.0
+Version: 0.13.1
+Cflags: -I${prefix}/include -I/opt/ros/noetic/include -I/usr/include/opencv4 -I/usr/include/eigen3 -I/usr/include/libxml2 -I/usr/include -I/usr/include/pcl-1.10 -I/usr/include/vtk-7.1 -I/usr/include/freetype2 -I/usr/include/x86_64-linux-gnu -I/usr/include/ni -I/usr/include/openni2 -I/usr/include/libusb-1.0 -I/usr/include/OGRE -I/usr/include/ois -I/usr/local/include
+Libs: -L${prefix}/lib -ltrackerNodelet -lvisp_tracker /opt/ros/noetic/lib/libvisp_vs.so.3.6.1 /opt/ros/noetic/lib/libvisp_visual_features.so.3.6.1 /opt/ros/noetic/lib/libvisp_vision.so.3.6.1 /opt/ros/noetic/lib/libvisp_tt_mi.so.3.6.1 /opt/ros/noetic/lib/libvisp_tt.so.3.6.1 /opt/ros/noetic/lib/libvisp_me.so.3.6.1 /opt/ros/noetic/lib/libvisp_mbt.so.3.6.1 /opt/ros/noetic/lib/libvisp_klt.so.3.6.1 /opt/ros/noetic/lib/libvisp_blob.so.3.6.1 /opt/ros/noetic/lib/libvisp_sensor.so.3.6.1 /opt/ros/noetic/lib/libvisp_robot.so.3.6.1 /opt/ros/noetic/lib/libvisp_io.so.3.6.1 /opt/ros/noetic/lib/libvisp_imgproc.so.3.6.1 /opt/ros/noetic/lib/libvisp_gui.so.3.6.1 /opt/ros/noetic/lib/libvisp_detection.so.3.6.1 /opt/ros/noetic/lib/libvisp_core.so.3.6.1 /opt/ros/noetic/lib/libvisp_ar.so.3.6.1
 Requires: dynamic_reconfigure geometry_msgs message_runtime nodelet roscpp sensor_msgs std_msgs tf

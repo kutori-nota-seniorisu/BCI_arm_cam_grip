@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sd/catkin_ws/src/robotiq/robotiq_ft_sensor/nodes/rq_test_sensor.cpp" "/home/sd/catkin_ws/build/robotiq/robotiq_ft_sensor/CMakeFiles/rq_test_sensor.dir/nodes/rq_test_sensor.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_ft_sensor/nodes/rq_test_sensor.cpp" "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_ft_sensor/CMakeFiles/rq_test_sensor.dir/nodes/rq_test_sensor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,10 +17,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/sd/catkin_ws/devel/include"
-  "/home/sd/catkin_ws/src/robotiq/robotiq_ft_sensor/include"
-  "/opt/ros/melodic/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/sd/BCI_arm_cam_grip/devel/include"
+  "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_ft_sensor/include"
+  "/opt/ros/noetic/include"
+  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.

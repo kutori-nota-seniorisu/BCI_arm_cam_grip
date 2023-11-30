@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h"
+  "/home/sd/BCI_arm_cam_grip/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h"
   "CMakeFiles/robotiq_2f_gripper_control_generate_messages_cpp"
-  "/home/sd/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_output.h"
-  "/home/sd/catkin_ws/devel/include/robotiq_2f_gripper_control/Robotiq2FGripper_robot_input.h"
 )
 
 # Per-language clean rules from dependency scanning.

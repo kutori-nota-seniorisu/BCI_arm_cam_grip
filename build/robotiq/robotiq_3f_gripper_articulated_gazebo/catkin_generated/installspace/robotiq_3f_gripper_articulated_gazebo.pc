@@ -1,4 +1,4 @@
-prefix=/home/sd/catkin_ws/install
+prefix=/home/sd/BCI_arm_cam_grip/install
 
 Name: robotiq_3f_gripper_articulated_gazebo
 Description: Description of robotiq_3f_gripper_articulated_gazebo

@@ -1,4 +1,4 @@
-prefix=/home/sd/catkin_ws/devel
+prefix=/home/sd/BCI_arm_cam_grip/devel
 
 Name: robotiq_modbus_rtu
 Description: Description of robotiq_modbus_rtu

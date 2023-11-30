@@ -67,14 +67,14 @@ set(robotiq_ft_sensor_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(robotiq_ft_sensor_SOURCE_PREFIX /home/sd/catkin_ws/src/robotiq/robotiq_ft_sensor)
-  set(robotiq_ft_sensor_DEVEL_PREFIX /home/sd/catkin_ws/devel)
+  set(robotiq_ft_sensor_SOURCE_PREFIX /home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_ft_sensor)
+  set(robotiq_ft_sensor_DEVEL_PREFIX /home/sd/BCI_arm_cam_grip/devel)
   set(robotiq_ft_sensor_INSTALL_PREFIX "")
   set(robotiq_ft_sensor_PREFIX ${robotiq_ft_sensor_DEVEL_PREFIX})
 else()
   set(robotiq_ft_sensor_SOURCE_PREFIX "")
   set(robotiq_ft_sensor_DEVEL_PREFIX "")
-  set(robotiq_ft_sensor_INSTALL_PREFIX /home/sd/catkin_ws/install)
+  set(robotiq_ft_sensor_INSTALL_PREFIX /home/sd/BCI_arm_cam_grip/install)
   set(robotiq_ft_sensor_PREFIX ${robotiq_ft_sensor_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/sd/catkin_ws/install/lib;/home/sd/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/sd/BCI_arm_cam_grip/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${robotiq_ft_sensor_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "message_runtime;std_msgs")
+set(depends "message_runtime;std_msgs;roscpp")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(robotiq_ft_sensor_LIBRARIES ${robotiq_ft_sensor_LIBRARIES})
 
   _list_append_unique(robotiq_ft_sensor_LIBRARY_DIRS ${${robotiq_ft_sensor_dep}_LIBRARY_DIRS})
-  list(APPEND robotiq_ft_sensor_EXPORTED_TARGETS ${${robotiq_ft_sensor_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(robotiq_ft_sensor_EXPORTED_TARGETS ${${robotiq_ft_sensor_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "robotiq_ft_sensor-msg-extras.cmake")

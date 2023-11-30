@@ -1,8 +1,8 @@
-# Install script for directory: /home/sd/catkin_ws/src/bci_grip
+# Install script for directory: /home/sd/BCI_arm_cam_grip/src/bci_grip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sd/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/sd/BCI_arm_cam_grip/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,49 +38,41 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip/cmake" TYPE FILE FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/bci_grip-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip/cmake" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/bci_grip-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/sd/catkin_ws/devel/share/roseus/ros/bci_grip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/sd/BCI_arm_cam_grip/devel/share/roseus/ros/bci_grip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/bci_grip")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/bci_grip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/sd/catkin_ws/devel/lib/python2.7/dist-packages/bci_grip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/sd/BCI_arm_cam_grip/devel/lib/python3/dist-packages/bci_grip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/bci_grip.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/bci_grip.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip/cmake" TYPE FILE FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/bci_grip-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip/cmake" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/bci_grip-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip/cmake" TYPE FILE FILES
-    "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/bci_gripConfig.cmake"
-    "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/bci_gripConfig-version.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/bci_gripConfig.cmake"
+    "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/bci_gripConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip" TYPE FILE FILES "/home/sd/catkin_ws/src/bci_grip/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bci_grip" TYPE FILE FILES "/home/sd/BCI_arm_cam_grip/src/bci_grip/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bci_grip" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/measure.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bci_grip" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/node_pic_py.py")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bci_grip" TYPE PROGRAM FILES "/home/sd/catkin_ws/build/bci_grip/catkin_generated/installspace/png2jpg.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/bci_grip" TYPE PROGRAM FILES "/home/sd/BCI_arm_cam_grip/build/bci_grip/catkin_generated/installspace/ssvep_ptb.py")
 endif()
 

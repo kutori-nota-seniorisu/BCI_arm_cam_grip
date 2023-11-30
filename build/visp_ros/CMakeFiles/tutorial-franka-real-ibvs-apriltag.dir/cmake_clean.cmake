@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/tutorial-franka-real-ibvs-apriltag"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/tutorial-franka-real-ibvs-apriltag.pdb"
   "CMakeFiles/tutorial-franka-real-ibvs-apriltag.dir/tutorial/franka/real-robot/tutorial-franka-real-ibvs-apriltag.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/tutorial-franka-real-ibvs-apriltag.pdb"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/tutorial-franka-real-ibvs-apriltag"
 )
 
 # Per-language clean rules from dependency scanning.

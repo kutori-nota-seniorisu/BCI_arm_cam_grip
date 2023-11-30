@@ -25,8 +25,8 @@
    (&key
     ((:pose_stamped __pose_stamped) (instance geometry_msgs::PoseStamped :init))
     ((:image __image) (instance sensor_msgs::Image :init))
-    ((:blob_cogs __blob_cogs) (let (r) (dotimes (i 0) (push (instance visp_ros::ImagePoint :init) r)) r))
-    ((:blob_proj __blob_proj) (let (r) (dotimes (i 0) (push (instance visp_ros::ProjectedPoint :init) r)) r))
+    ((:blob_cogs __blob_cogs) ())
+    ((:blob_proj __blob_proj) ())
     )
    (send-super :init)
    (setq _pose_stamped __pose_stamped)

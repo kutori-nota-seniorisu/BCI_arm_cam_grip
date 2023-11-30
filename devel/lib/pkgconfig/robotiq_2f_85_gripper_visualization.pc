@@ -1,4 +1,4 @@
-prefix=/home/sd/catkin_ws/devel
+prefix=/home/sd/BCI_arm_cam_grip/devel
 
 Name: robotiq_2f_85_gripper_visualization
 Description: Description of robotiq_2f_85_gripper_visualization

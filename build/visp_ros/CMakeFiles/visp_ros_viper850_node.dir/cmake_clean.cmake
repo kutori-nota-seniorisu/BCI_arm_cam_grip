@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/visp_ros_viper850_node"
+  "/home/sd/BCI_arm_cam_grip/devel/lib/visp_ros/visp_ros_viper850_node.pdb"
   "CMakeFiles/visp_ros_viper850_node.dir/nodes/viper850.cpp.o"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/visp_ros_viper850_node.pdb"
-  "/home/sd/catkin_ws/devel/lib/visp_ros/visp_ros_viper850_node"
 )
 
 # Per-language clean rules from dependency scanning.

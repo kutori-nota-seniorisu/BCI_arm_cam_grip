@@ -1,0 +1,22 @@
+(cl:in-package visual_servo-msg)
+(cl:export '(HEADER-VAL
+          HEADER
+          ACTUALTCPPOSE-VAL
+          ACTUALTCPPOSE
+          TARGETTCPPOSE-VAL
+          TARGETTCPPOSE
+          ACTUALTCPSPEED-VAL
+          ACTUALTCPSPEED
+          TARGETTCPSPEED-VAL
+          TARGETTCPSPEED
+          ACTUALTCPFORCE-VAL
+          ACTUALTCPFORCE
+          ACTUALTOOLACCEL-VAL
+          ACTUALTOOLACCEL
+          ACTUALJOINTPOSITION-VAL
+          ACTUALJOINTPOSITION
+          END2BASE-VAL
+          END2BASE
+          DIGITALINPUTBITS-VAL
+          DIGITALINPUTBITS
+))

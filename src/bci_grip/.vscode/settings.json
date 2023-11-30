@@ -76,5 +76,6 @@
         "geometry": "cpp",
         "future": "cpp",
         "codecvt": "cpp"
-    }
+    },
+    "ros.distro": "melodic"
 }

@@ -13,5 +13,5 @@
 
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>robotiq_3f_gripper_visualization</exec_depend>
-
+<exec_depend>robot_state_publisher</exec_depend>
 </package>

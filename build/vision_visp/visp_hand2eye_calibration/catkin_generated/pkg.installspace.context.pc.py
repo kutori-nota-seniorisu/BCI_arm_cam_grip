@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;message_runtime;roscpp;sensor_msgs;std_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "visp_hand2eye_calibration"
-PROJECT_SPACE_DIR = "/home/sd/catkin_ws/install"
-PROJECT_VERSION = "0.13.0"
+PROJECT_SPACE_DIR = "/home/sd/BCI_arm_cam_grip/install"
+PROJECT_VERSION = "0.13.1"

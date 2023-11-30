@@ -4,13 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/src/client.cpp" "/home/sd/catkin_ws/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_client.dir/src/client.cpp.o"
-  "/home/sd/catkin_ws/src/vision_visp/visp_hand2eye_calibration/src/client_main.cpp" "/home/sd/catkin_ws/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_client.dir/src/client_main.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/src/client.cpp" "/home/sd/BCI_arm_cam_grip/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_client.dir/src/client.cpp.o"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_hand2eye_calibration/src/client_main.cpp" "/home/sd/BCI_arm_cam_grip/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_client.dir/src/client_main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"visp_hand2eye_calibration\""
@@ -18,21 +22,27 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/sd/catkin_ws/devel/include"
-  "/opt/ros/melodic/include"
-  "/usr/include/opencv"
+  "/home/sd/BCI_arm_cam_grip/devel/include"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_bridge/include"
+  "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/noetic/include"
+  "/usr/include/opencv4"
   "/usr/include/eigen3"
   "/usr/include/libxml2"
+  "/usr/include/pcl-1.10"
+  "/usr/include/vtk-7.1"
+  "/usr/include/freetype2"
+  "/usr/include/ni"
+  "/usr/include/openni2"
+  "/usr/include/libusb-1.0"
   "/usr/include/OGRE"
   "/usr/include/ois"
-  "/home/sd/catkin_ws/src/vision_visp/visp_bridge/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/sd/catkin_ws/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_common.dir/DependInfo.cmake"
-  "/home/sd/catkin_ws/build/vision_visp/visp_bridge/CMakeFiles/visp_bridge.dir/DependInfo.cmake"
+  "/home/sd/BCI_arm_cam_grip/build/vision_visp/visp_hand2eye_calibration/CMakeFiles/visp_hand2eye_calibration_common.dir/DependInfo.cmake"
+  "/home/sd/BCI_arm_cam_grip/build/vision_visp/visp_bridge/CMakeFiles/visp_bridge.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

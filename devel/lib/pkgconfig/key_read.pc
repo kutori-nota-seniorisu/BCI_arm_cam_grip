@@ -1,8 +1,0 @@
-prefix=/home/sd/catkin_ws/devel
-
-Name: key_read
-Description: Description of key_read
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
