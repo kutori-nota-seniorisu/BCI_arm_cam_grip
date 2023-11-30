@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 # 用对比度实现，范围是[-1,1]
-# 用两帧之间的间隔时间为时间增量，并创建对应序列
+# 用getTime创建对应序列
 import random
 import numpy as np
 import rospy
@@ -53,9 +53,10 @@ def ssvep_pre():
 	changesig = 1
 	result = 0
 	bg_colour = [-1, -1, -0.25]
-	# PTB窗口显示大小
+	# 【PTB窗口显示大小】
 	win = visual.Window(
-		size=[1920/3*2, 1080/3*2], # 1280*720
+		size=[1920/3*2, 1080/3*2],
+		# size=[640, 480],
 		units="pix",
 		fullscr=False,
 		color=[-1,-1,-1], # black(-1,-1,-1)  white(1,1,1)
@@ -63,7 +64,6 @@ def ssvep_pre():
 	screenXpixels, screenYpixels = win.size   # Get the size of the on screen window 
 	Msperframe = win.getMsPerFrame()  # 刷新间隔 16.667 ms
 	ifi = win.getMsPerFrame()[0] / 1000 # 刷新间隔 0.0167 ms
-	print("MsPerFrame ", ifi, "s,", "FPS ", 1 / ifi, "Hz")
 	# print('Msperframe', Msperframe, "ms")
 	# fps = np.round(1000 / Msperframe[0]).astype(int)  # 每秒刷新率 % 60Hz
 	# FPS = win.getActualFrameRate()
@@ -129,12 +129,18 @@ def ssvep_pre():
 											size=[Flash_Position_Pseudo[i][2], Flash_Position_Pseudo[i][3]]
 											)
 	print("image",Image_PseudoKey.shape)
-
+	# seq = [[0 for i in range(fps)] for i in range(5)]  # 创建对于帧数的数组
+	# n = np.arange(0, fps)
+	# for i in range(4):
+	# 	seq[i] = [(math.sin(angF_pre * (j / fps))) for j in range(n.shape[0])]  # 利用math.sin转换成正弦波，并且利用offset将幅值转换到0～1,进而利用对比度实现闪烁。
+	clock_flash = core.Clock()
+	
 	while 1:
 		wait_text_1.draw()
 		win.flip()
 		if event.getKeys(keyList=['space', 'escape']):
 			break
+	clock_flash.reset()
 	time = 0
 	# 伪密钥阶段
 	while 1:
@@ -143,8 +149,7 @@ def ssvep_pre():
 		for num in range(4):
 			block_PseudoKey[num].contrast = np.sin(angF_pre * time)
 			block_PseudoKey[num].draw()
-		# 用两帧间隔作为时间增量
-		time = time + ifi
+		time = clock_flash.getTime()
 		win.flip()
 		
 	# 伪密钥检测后，进入了下一个场景图片接收与显示的阶段
@@ -193,7 +198,7 @@ def ssvep_pre():
 	WhiteImage = cv2.resize(WhiteImage, [100, 100], cv2.INTER_CUBIC) 
 	cv2.imwrite(path + 'target_White_rs.jpg', WhiteImage)
 	WhiteImageLocation = path + 'target_White_rs.jpg' 
-	# 红色代表注视选择后的目标
+	# 红色代表注释选择后的目标
 	RedImageLocation = path + 'SmallRed.jpg'
 	RedImage = cv2.imread(RedImageLocation)
 	RedImage = cv2.resize(RedImage, [100, 100], cv2.INTER_CUBIC) 
@@ -207,7 +212,12 @@ def ssvep_pre():
 	object_startPhase = np.array([0.0, 0.25, 0.5, 0.75, 1.0, 1.25]) * np.pi    #  6个相位
 	imageTexture_White = visual.ImageStim(win=win, image=WhiteImageLocation)
 	imageTexture_Red = visual.ImageStim(win=win, image=RedImageLocation)
-
+	# seq1 = [[0 for i in range(fps)] for i in range(object_frequency.shape[0])]  # 创建对于帧数的数组
+	# n = np.arange(0, fps)
+	# print('nppy', object_frequency.shape[0])
+	# for i in range(object_frequency.shape[0]):
+	# 	seq1[i] = [(math.sin(object_angFreq[i] * (j / fps)) * amplitude+ amplitude) for j in range(n.shape[0])]  # 利用math.sin转换成正弦波，并且利用offset将幅值转换到0～1,进而利用对比度实现闪烁。
+	clock_flash.reset()
 	time = 0
 	while 1:
 		if event.getKeys(keyList=['space', 'escape']):
@@ -264,17 +274,17 @@ def ssvep_pre():
 					imageTexture_Red.draw()
 				else:
 					imageTexture_Black.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-					imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]]
+					# imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]] # 这一行重新设置了黑色色块的大小
 					imageTexture_Black.contrast = np.sin(object_angFreq[i] * time)
-					imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-					imageTexture_White.draw()
+					# imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
+					# imageTexture_White.draw()
 					imageTexture_Black.draw()
 			else:
 				imageTexture_Black.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-				imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]]
+				# imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]] # 这一行重新设置了黑色色块的大小
 				imageTexture_Black.contrast = np.sin(object_angFreq[i] * time)
-				imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-				imageTexture_White.draw()
+				# imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
+				# imageTexture_White.draw()
 				imageTexture_Black.draw()
 				# print(imageTexture_Black.pos)
 				# print("pos")
@@ -284,7 +294,7 @@ def ssvep_pre():
 				# print(delta_pos )
 				# print(Pos)
 		win.flip()
-		time = time + ifi
+		time = clock_flash.getTime()
 	win.flip()
 	wait_text_3.draw()
 	win.flip()

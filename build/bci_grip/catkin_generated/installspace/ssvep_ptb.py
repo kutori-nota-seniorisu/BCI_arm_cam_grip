@@ -129,7 +129,7 @@ def ssvep_pre():
     seq = [[0 for i in range(fps)] for i in range(5)]  # 创建对于帧数的数组
     n = np.arange(0, fps)
     for i in range(4):
-        seq[i] = [(math.sin(angF_pre * (j / fps)) * 0.5 + 0.5) for j in range(n.shape[0])]  # 利用math.sin转换成正弦波，并且利用offset将幅值转换到0～1,进而利用对比度实现闪烁。
+        seq[i] = [(math.sin(angF_pre * (j / fps))) for j in range(n.shape[0])]  # 利用math.sin转换成正弦波，并且利用offset将幅值转换到0～1,进而利用对比度实现闪烁。
     
     while 1:
         wait_text_1.draw()

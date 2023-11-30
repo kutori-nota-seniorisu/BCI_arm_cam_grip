@@ -271,17 +271,17 @@ def ssvep_pre():
 					imageTexture_Red.draw()
 				else:
 					imageTexture_Black.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-					imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]]
+					# imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]] # 这一行重新设置了黑色色块的大小
 					imageTexture_Black.contrast = np.sin(object_angFreq[i] * time)
-					imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-					imageTexture_White.draw()
+					# imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
+					# imageTexture_White.draw()
 					imageTexture_Black.draw()
 			else:
 				imageTexture_Black.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-				imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]]
+				# imageTexture_Black.size = [Flash_Position_Black[i][2], Flash_Position_Black[i][3]] # 这一行重新设置了黑色色块的大小
 				imageTexture_Black.contrast = np.sin(object_angFreq[i] * time)
-				imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
-				imageTexture_White.draw()
+				# imageTexture_White.pos = [Flash_Position_Black[i][0], Flash_Position_Black[i][1]]
+				# imageTexture_White.draw()
 				imageTexture_Black.draw()
 				# print(imageTexture_Black.pos)
 				# print("pos")
