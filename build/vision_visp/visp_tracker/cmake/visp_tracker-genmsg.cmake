@@ -24,7 +24,7 @@ add_custom_target(_visp_tracker_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg" NAME_WE)
 add_custom_target(_visp_tracker_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_tracker" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg" "visp_tracker/KltPoint:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_tracker" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg" "std_msgs/Header:visp_tracker/KltPoint"
 )
 
 get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg" NAME_WE)
@@ -54,7 +54,7 @@ add_custom_target(_visp_tracker_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv" NAME_WE)
 add_custom_target(_visp_tracker_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_tracker" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv" "geometry_msgs/Transform:geometry_msgs/Vector3:geometry_msgs/Quaternion:visp_tracker/TrackerSettings:visp_tracker/KltSettings:visp_tracker/MovingEdgeSettings"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "visp_tracker" "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv" "visp_tracker/TrackerSettings:visp_tracker/KltSettings:visp_tracker/MovingEdgeSettings:geometry_msgs/Transform:geometry_msgs/Vector3:geometry_msgs/Quaternion"
 )
 
 #
@@ -72,7 +72,7 @@ _generate_msg_cpp(visp_tracker
 _generate_msg_cpp(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_tracker
 )
 _generate_msg_cpp(visp_tracker
@@ -110,7 +110,7 @@ _generate_msg_cpp(visp_tracker
 _generate_srv_cpp(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/visp_tracker
 )
 
@@ -161,7 +161,7 @@ _generate_msg_eus(visp_tracker
 _generate_msg_eus(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_tracker
 )
 _generate_msg_eus(visp_tracker
@@ -199,7 +199,7 @@ _generate_msg_eus(visp_tracker
 _generate_srv_eus(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/visp_tracker
 )
 
@@ -250,7 +250,7 @@ _generate_msg_lisp(visp_tracker
 _generate_msg_lisp(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_tracker
 )
 _generate_msg_lisp(visp_tracker
@@ -288,7 +288,7 @@ _generate_msg_lisp(visp_tracker
 _generate_srv_lisp(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/visp_tracker
 )
 
@@ -339,7 +339,7 @@ _generate_msg_nodejs(visp_tracker
 _generate_msg_nodejs(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_tracker
 )
 _generate_msg_nodejs(visp_tracker
@@ -377,7 +377,7 @@ _generate_msg_nodejs(visp_tracker
 _generate_srv_nodejs(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/visp_tracker
 )
 
@@ -428,7 +428,7 @@ _generate_msg_py(visp_tracker
 _generate_msg_py(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltPoint.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_tracker
 )
 _generate_msg_py(visp_tracker
@@ -466,7 +466,7 @@ _generate_msg_py(visp_tracker
 _generate_srv_py(visp_tracker
   "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/srv/Init.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg"
+  "/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/TrackerSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/KltSettings.msg;/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_tracker/msg/MovingEdgeSettings.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/visp_tracker
 )
 

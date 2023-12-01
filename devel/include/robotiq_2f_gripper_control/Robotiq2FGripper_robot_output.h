@@ -182,7 +182,6 @@ struct Definition< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_output_<
 "uint8 rPR\n"
 "uint8 rSP\n"
 "uint8 rFR\n"
-"\n"
 ;
   }
 

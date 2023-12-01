@@ -125,7 +125,6 @@ class Robotiq2FGripper_robot_output {
     uint8 rSP
     uint8 rFR
     
-    
     `;
   }
 

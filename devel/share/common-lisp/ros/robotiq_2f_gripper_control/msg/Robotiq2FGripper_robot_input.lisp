@@ -133,10 +133,10 @@
   "17d49e32c00f4f2fb4fe664060553362")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Robotiq2FGripper_robot_input>)))
   "Returns full string definition for message of type '<Robotiq2FGripper_robot_input>"
-  (cl:format cl:nil "uint8 gACT ~%uint8 gGTO ~%uint8 gSTA ~%uint8 gOBJ ~%uint8 gFLT~%uint8 gPR~%uint8 gPO~%uint8 gCU~%~%~%"))
+  (cl:format cl:nil "uint8 gACT~%uint8 gGTO~%uint8 gSTA~%uint8 gOBJ~%uint8 gFLT~%uint8 gPR~%uint8 gPO~%uint8 gCU~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Robotiq2FGripper_robot_input)))
   "Returns full string definition for message of type 'Robotiq2FGripper_robot_input"
-  (cl:format cl:nil "uint8 gACT ~%uint8 gGTO ~%uint8 gSTA ~%uint8 gOBJ ~%uint8 gFLT~%uint8 gPR~%uint8 gPO~%uint8 gCU~%~%~%"))
+  (cl:format cl:nil "uint8 gACT~%uint8 gGTO~%uint8 gSTA~%uint8 gOBJ~%uint8 gFLT~%uint8 gPR~%uint8 gPO~%uint8 gCU~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Robotiq2FGripper_robot_input>))
   (cl:+ 0
      1

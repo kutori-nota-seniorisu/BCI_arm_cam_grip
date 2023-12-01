@@ -17,7 +17,6 @@ uint8 rATR
 uint8 rPR
 uint8 rSP
 uint8 rFR
-
 """
   __slots__ = ['rACT','rGTO','rATR','rPR','rSP','rFR']
   _slot_types = ['uint8','uint8','uint8','uint8','uint8','uint8']

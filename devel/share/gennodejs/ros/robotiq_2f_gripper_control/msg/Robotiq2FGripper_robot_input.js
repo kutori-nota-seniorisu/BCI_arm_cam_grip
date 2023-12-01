@@ -140,10 +140,10 @@ class Robotiq2FGripper_robot_input {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    uint8 gACT 
-    uint8 gGTO 
-    uint8 gSTA 
-    uint8 gOBJ 
+    uint8 gACT
+    uint8 gGTO
+    uint8 gSTA
+    uint8 gOBJ
     uint8 gFLT
     uint8 gPR
     uint8 gPO

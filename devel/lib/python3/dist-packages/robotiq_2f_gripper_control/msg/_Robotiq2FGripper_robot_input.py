@@ -11,10 +11,10 @@ class Robotiq2FGripper_robot_input(genpy.Message):
   _md5sum = "17d49e32c00f4f2fb4fe664060553362"
   _type = "robotiq_2f_gripper_control/Robotiq2FGripper_robot_input"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """uint8 gACT 
-uint8 gGTO 
-uint8 gSTA 
-uint8 gOBJ 
+  _full_text = """uint8 gACT
+uint8 gGTO
+uint8 gSTA
+uint8 gOBJ
 uint8 gFLT
 uint8 gPR
 uint8 gPO

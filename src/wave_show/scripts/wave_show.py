@@ -31,6 +31,12 @@ chanNum = 35
 # 数据包长度，默认为512
 packetLen = 512
 
+# 存放显示的数据
+wave_data = 0
+
+# 显示的数据长度 3s*2048Hz
+showLen = 0
+
 # 参数：50Hz陷波滤波器
 # 将要被移除的频率 (Hz)
 f_notch = 50
@@ -49,40 +55,45 @@ class MySignal(QObject):
 def wave_draw(val):
 	global base_check, notch_check, high_check, low_check
 	global current_index
-	global chanNum, packetLen
+	global packetLen, wave_data, showLen
 
 	# t 为时间刻度
-	t = np.arange(0,packetLen)
+	t = np.arange(0,showLen)
 
 	nEegChan = val.shape[0]
 	dDeltaY = 1.0 / nEegChan
 
 	aAvg = np.mean(val, -1)
-	aMax = np.max(val, -1)
-	aMin = np.min(val, -1)
+	# aMax = np.max(val, -1)
+	# aMin = np.min(val, -1)
 	
-	wave_data = val
+	# wave_data = val
 	# 基线移动
 	if base_check:
 		# print("in base check")
 		for i in range(0, nEegChan):
-			wave_data[i] = wave_data[i] - aAvg[i]
+			val[i] = val[i] - aAvg[i]
 	# 50Hz陷波滤波
 	if notch_check:
 		# print("in notch check")
-		wave_data = signal.filtfilt(notch_b, notch_a, wave_data)
+		val = signal.filtfilt(notch_b, notch_a, val)
 	# 低通滤波
 	if low_check:
 		N = 8
 		Wn = ui.spinBox_low.value() / (sampleRate / 2)
 		B, A = signal.cheby1(N, 0.5, Wn, "low")
-		wave_data = signal.filtfilt(B, A, wave_data)
+		val = signal.filtfilt(B, A, val)
 	# 高通滤波
 	if high_check:
 		N = 8
 		Wn = ui.spinBox_high.value() / (sampleRate / 2)
 		B, A = signal.cheby1(N, 0.5, Wn, "high")
-		wave_data = signal.filtfilt(B, A, wave_data)
+		val = signal.filtfilt(B, A, val)
+
+	wave_data = np.hstack((wave_data, val))
+	wave_data = wave_data[:, -showLen:]
+	aMax = np.max(wave_data, -1)
+	aMin = np.min(wave_data, -1)
 
 	p1.clear()
 	# 曲线绘制
@@ -106,7 +117,7 @@ def wave_draw(val):
 	if current_index != -1:
 		# print("I draw picture 3")
 		Ts = 1 / sampleRate
-		L = packetLen
+		L = showLen
 		# 频率分辨率
 		delta_f = sampleRate / L
 		# 傅里叶变换
@@ -126,9 +137,11 @@ mysi.signal.connect(wave_draw)
 
 # 获取采样频率
 def callback_get_rate(rate):
-	global sampleRate
+	global sampleRate, showLen
 	sampleRate = rate.data
 	print("采样频率为：", sampleRate)
+	showLen = 3 * sampleRate
+	
 
 # 获取通道标签
 def callback_get_chan(chan):
@@ -138,9 +151,10 @@ def callback_get_chan(chan):
 
 # 获取通道数量
 def callback_get_chanNum(num):
-	global chanNum
+	global chanNum, sampleRate, wave_data, showLen
 	chanNum = num.data
 	print("通道数量为：", chanNum)
+	wave_data = np.zeros((chanNum, showLen))
 
 # 获取数据包长度
 def callback_get_sampleNum(sampleNum):

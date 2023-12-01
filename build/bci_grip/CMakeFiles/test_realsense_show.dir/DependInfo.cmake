@@ -23,8 +23,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/sd/BCI_arm_cam_grip/src/bci_grip/include"
   "/home/sd/BCI_arm_cam_grip/devel/include"
-  "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_2f_gripper_control/include"
-  "/home/sd/BCI_arm_cam_grip/src/robotiq/robotiq_ethercat/include"
+  "/home/sd/BCI_arm_cam_grip/src/robotiq-noetic-devel/robotiq_2f_gripper_control/include"
+  "/home/sd/BCI_arm_cam_grip/src/robotiq-noetic-devel/robotiq_ethercat/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/noetic/include/soem"
@@ -40,7 +40,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/sd/BCI_arm_cam_grip/build/robotiq/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/DependInfo.cmake"
+  "/home/sd/BCI_arm_cam_grip/build/robotiq-noetic-devel/robotiq_ethercat/CMakeFiles/robotiq_ethercat.dir/DependInfo.cmake"
   "/home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/subpicpubsig.dir/DependInfo.cmake"
   )
 

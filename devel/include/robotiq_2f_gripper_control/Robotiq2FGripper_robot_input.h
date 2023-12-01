@@ -188,10 +188,10 @@ struct Definition< ::robotiq_2f_gripper_control::Robotiq2FGripper_robot_input_<C
 {
   static const char* value()
   {
-    return "uint8 gACT \n"
-"uint8 gGTO \n"
-"uint8 gSTA \n"
-"uint8 gOBJ \n"
+    return "uint8 gACT\n"
+"uint8 gGTO\n"
+"uint8 gSTA\n"
+"uint8 gOBJ\n"
 "uint8 gFLT\n"
 "uint8 gPR\n"
 "uint8 gPO\n"

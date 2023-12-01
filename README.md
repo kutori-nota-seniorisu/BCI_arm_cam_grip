@@ -49,3 +49,7 @@ Qt版本 5.9.9
 1. 首先运行相机配置launch文件：`roslaunch realsense2_camera rs_aligned_depth.launch`
 2. 接着运行数据发送与分析节点：`roslaunch online_analysis ana_simu.launch`
 3. 最后运行相机节点：`rosrun bci_grip col_align_depth.cpp`
+
+## ptb 刺激界面
+
+请使用ssvep_ptb_1.py

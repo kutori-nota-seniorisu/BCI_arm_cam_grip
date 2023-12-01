@@ -35,13 +35,15 @@ def PositionLength_Callback(msg):
 	ReceivePosLen = np.array(msg.data)
 	# 将 ReceivePosLen 重构为 (length(ReceivePosLen)/3,3) 的新的矩阵 Pos
 	# len(ReceivePosLen)/3为物块个数，3表示位置x、y和矩形边长
-	print(ReceivePosLen.shape[0])
+	print("Receive Pos Length:", ReceivePosLen.shape[0])
 	Pos = ReceivePosLen.reshape(int(ReceivePosLen.shape[0] / 3), 3)
 	# Pos = Pos.T
 	
 def GripSig_Callback(msg):
-	global changesig
+	global changesig, result
 	changesig = msg.data
+	result = 0
+	print("已将result置零!")
 	
 def Result_Callback(msg):
 	global result
@@ -128,7 +130,7 @@ def ssvep_pre():
 											pos=[Flash_Position_Pseudo[i][0], Flash_Position_Pseudo[i][1]],
 											size=[Flash_Position_Pseudo[i][2], Flash_Position_Pseudo[i][3]]
 											)
-	print("image",Image_PseudoKey.shape)
+	print("image:",Image_PseudoKey.shape)
 	# seq = [[0 for i in range(fps)] for i in range(5)]  # 创建对于帧数的数组
 	# n = np.arange(0, fps)
 	# for i in range(4):
@@ -210,6 +212,7 @@ def ssvep_pre():
 	object_startPhase = np.array([0.0, 0.25, 0.5, 0.75, 1.0, 1.25]) * np.pi    #  6个相位
 	imageTexture_White = visual.ImageStim(win=win, image=WhiteImageLocation)
 	imageTexture_Red = visual.ImageStim(win=win, image=RedImageLocation)
+	imageTexture_Black = visual.ImageStim(win=win, image=BlackImageLocation)
 	# seq1 = [[0 for i in range(fps)] for i in range(object_frequency.shape[0])]  # 创建对于帧数的数组
 	# n = np.arange(0, fps)
 	# print('nppy', object_frequency.shape[0])
@@ -225,6 +228,8 @@ def ssvep_pre():
 			break
 		# 在一轮小循环中，如果没有抓取完毕，则changesig仍为0，只有在changesig为1时（抓取完毕）才会切换图片
 		if changesig == 1:  # 每一抓取实验前的初始化
+			# 下面的循环用于设定黑色闪烁位置，本来不需要循环，但是会出现object_num与pos.shape[0]不匹配的情况，故使用了循环，确保两者相等
+			# pos 连发了三次，在subpicpubsig.cpp中
 			jump_while = 1
 			while (jump_while):
 				object_num = Pos.shape[0] # Pos_size[640,480,3]
@@ -233,8 +238,8 @@ def ssvep_pre():
 				resize_y2 = int(height * ratio_2) # 480*1.5=720
 				resize_x2 = int(width * ratio_2)  # 640*1.5=960
 				Flash_Position_Black = np.zeros((object_num, 4))
-				imageTexture_Black = visual.ImageStim(win=win, image=BlackImageLocation)
-				imageTexture_White = visual.ImageStim(win=win, image=WhiteImageLocation)
+				# imageTexture_Black = visual.ImageStim(win=win, image=BlackImageLocation)
+				# imageTexture_White = visual.ImageStim(win=win, image=WhiteImageLocation)
 				for i in range(object_num):
 					print("object")
 					print(object_num)

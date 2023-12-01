@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,librobotiq_ethercat.so -o /home/sd/BCI_arm_cam_grip/devel/lib/librobotiq_ethercat.so CMakeFiles/robotiq_ethercat.dir/src/ethercat_manager.cpp.o 
