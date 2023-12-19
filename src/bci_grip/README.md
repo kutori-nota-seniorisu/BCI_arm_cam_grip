@@ -32,7 +32,14 @@
 在 *BBBCI* 工作空间下运行：  
 `sudo chmod +777 /dev/ttyUSB0`  _给串口赋权限_   
 `rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyUSB0`  
-此时指示灯由红变蓝  
+此时指示灯由红变蓝
+
+上述代码运行时可能出现 robotiq_modbus_tcp 依赖无法安装 pymodbus报错等问题
+参考网址 <https://blog.csdn.net/m0_74089435/article/details/130068429>
+`rosdep install robotiq_modbus_tcp`
+`sudo apt-get install ros-（自己ros版本）-soem`
+然后再编译一下就可以
+
 再开一个终端，执行：  
 `rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController.py`
 即可在终端利用按键控制夹爪，可利用此步测试夹爪是否能成功控制。  
