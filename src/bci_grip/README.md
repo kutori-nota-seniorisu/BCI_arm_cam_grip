@@ -26,7 +26,8 @@
 `roslaunch realsense2_camera rs_aligned_depth.launch`  
 运行该文件前，可使用 `realsense-viewer` 在可视化界面中检查相机连接及深度类型
 ### bci_ur_move.cpp
-控制机械臂运动和夹爪动作  
+控制机械臂运动和夹爪动作
+控制机械臂运动：`rosrun bci_grip bci_ur_actual`  
 依赖于 _robotiq_ 功能包及 _ur_rtde_  
 **注意：** 启动前需要先运行 _robotiq_ 功能包内相关节点 
 在 *BBBCI* 工作空间下运行：  
@@ -37,7 +38,7 @@
 上述代码运行时可能出现 robotiq_modbus_tcp 依赖无法安装 pymodbus报错等问题
 参考网址 <https://blog.csdn.net/m0_74089435/article/details/130068429>
 `rosdep install robotiq_modbus_tcp`
-`sudo apt-get install ros-（自己ros版本）-soem`
+`sudo apt-get install ros-（自己ros版本）-soem`  
 然后再编译一下就可以
 
 再开一个终端，执行：  
