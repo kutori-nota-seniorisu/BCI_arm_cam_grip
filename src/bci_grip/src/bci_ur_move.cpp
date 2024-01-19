@@ -64,6 +64,7 @@ int main(int argc, char** argv) {
 	std_msgs::Bool GripSigMsg1;
 	// 对应的publisher在 subpicpubsig.cpp 中，数据类型为 Float64MultiArray
 	// 获得一个一维数组，数组中依次是：1号物块x坐标，1号物块y坐标，1号物块短边边长，2号物块x坐标，2号物块y坐标，2号物块短边边长…… 
+	// 在此处使用了全局变量len来存储数组长度，使用了PosLen来存储话题数据
 	ros::Subscriber PositionLength_Sub = n.subscribe("/PositionLengthNode", 10, &PosLenCallback);
 	// 对应的publisher在 onlineanalysis.py 中，数据类型为 UInt16
 	// 获得一个数字，是CCA分析结果
@@ -71,9 +72,6 @@ int main(int argc, char** argv) {
 	// 对应的publisher在 subpicpubsig.cpp 中，数据类型为 Float64MultiArray
 	// 获取了点云信息
 	ros::Subscriber Point_Sub = n.subscribe("/Point3D", 1, &PointCallback);
-
-	tf2_ros::Buffer tfBuffer;
-	tf2_ros::TransformListener tfListener(tfBuffer);  //获取机械臂末端在基坐标系下的位姿
 
 	ros::Rate loop_rate(CTRL_FREQ);
 
@@ -139,11 +137,12 @@ int main(int argc, char** argv) {
 				if(result == fre[i])
 					break;
 			}
-			ROS_INFO("I = %d", i);
+			ROS_INFO("结果是第%d个物块", i+1);
 			if(i >= len / 3)
 				continue;
 
 			Eigen::Matrix<double, 4, 1>  Pt_TCL, Pt_Base;
+			// Pt_TCL是齐次坐标
 			Pt_TCL  << Point3D(0, i), Point3D(1, i), Point3D(2, i), 1.0;
 			
 			ROS_INFO("Pt_TCL : %f, %f, %f", Pt_TCL(0, 0), Pt_TCL(1, 0), Pt_TCL(2, 0));     
