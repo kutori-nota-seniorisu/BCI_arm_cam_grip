@@ -73,9 +73,9 @@ vision_visp/visp_camera_calibration/CMakeFiles/visp_camera_calibration_generate_
 
 /home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
 /home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_camera_calibration/msg/ImageAndPoints.msg
+/home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_camera_calibration/msg/ImagePoint.msg
 /home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
-/home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg/ImageAndPoints.lisp: /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_camera_calibration/msg/ImagePoint.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sd/BCI_arm_cam_grip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from visp_camera_calibration/ImageAndPoints.msg"
 	cd /home/sd/BCI_arm_cam_grip/build/vision_visp/visp_camera_calibration && ../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/sd/BCI_arm_cam_grip/src/vision_visp/visp_camera_calibration/msg/ImageAndPoints.msg -Ivisp_camera_calibration:/home/sd/BCI_arm_cam_grip/src/vision_visp/visp_camera_calibration/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p visp_camera_calibration -o /home/sd/BCI_arm_cam_grip/devel/share/common-lisp/ros/visp_camera_calibration/msg
 

@@ -4640,6 +4640,19 @@ bci_grip_generate_messages_cpp/fast:
 .PHONY : bci_grip_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named testeigen
+
+# Build rule for target.
+testeigen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testeigen
+.PHONY : testeigen
+
+# fast build rule for target.
+testeigen/fast:
+	$(MAKE) -f bci_grip/CMakeFiles/testeigen.dir/build.make bci_grip/CMakeFiles/testeigen.dir/build
+.PHONY : testeigen/fast
+
+#=============================================================================
 # Target rules for targets named industrial_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -5360,6 +5373,7 @@ help:
 	@echo "... control_toolbox_gencfg"
 	@echo "... shape_msgs_generate_messages_eus"
 	@echo "... bci_grip_generate_messages_cpp"
+	@echo "... testeigen"
 	@echo "... industrial_msgs_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... bci_grip_generate_messages_py"

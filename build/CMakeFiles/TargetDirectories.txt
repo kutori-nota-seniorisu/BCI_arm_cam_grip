@@ -564,6 +564,7 @@
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/control_toolbox_gencfg.dir
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/shape_msgs_generate_messages_eus.dir
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/bci_grip_generate_messages_cpp.dir
+/home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/testeigen.dir
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/industrial_msgs_generate_messages_cpp.dir
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/shape_msgs_generate_messages_lisp.dir
 /home/sd/BCI_arm_cam_grip/build/bci_grip/CMakeFiles/bci_grip_generate_messages_py.dir

@@ -300,7 +300,10 @@ def ssvep_pre():
 	win.flip()
 	wait_text_3.draw()
 	win.flip()
-	event.waitKeys()
+	# event.waitKeys()
+	while 1:
+		if event.getKeys(keyList=['space', 'escape']):
+			break
 	win.close()
 	rospy.signal_shutdown("Congratulation! The experiment is end!")
 	

@@ -67,6 +67,8 @@ void subpicpubsiger::GripSigCallback(const std_msgs::Bool::ConstPtr& MsgPtr)
 
 void subpicpubsiger::process_pic(cv::Mat color_image)
 {
+	//五个物块序号对应的闪烁频率
+	int fre[5] = {9, 10, 11, 12, 13};
 	// ROS_INFO("yeah!");
 	cv::Mat Img, Img1, img_hsv, erode_hsv, inRange_hsv, dialationImage;
 	int height = color_image.rows;//row表示行，rows表示行的总数，即图像的高
@@ -180,7 +182,9 @@ void subpicpubsiger::process_pic(cv::Mat color_image)
 				Point_Array.push_back(Pt_TCL(0, 1));
 				Point_Array.push_back(Pt_TCL(1, 1));
 				Point_Array.push_back(Pt_TCL(2, 1));
+				Point_Array.push_back(fre[index++]);
 				// ROS_INFO("PointArray：%f, %f", Point_Array[0], Point_Array[1]);
+				std::cout << "第" << index << "个物体" << std::endl;
 			}
 			
 			double length = 1000;

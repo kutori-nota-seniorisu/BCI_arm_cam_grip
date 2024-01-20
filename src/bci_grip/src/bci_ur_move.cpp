@@ -31,13 +31,14 @@ Eigen::MatrixXd PosLen;    //用来存储接收到的物块位置与最短边边
 Eigen::MatrixXd Point3D;
 int result;
 int len;
+bool isempty = true;
 
 void PosLenCallback(const std_msgs::Float64MultiArray::ConstPtr& msg) {
 	
 	std::vector<double> pos_len = msg->data;
 	ROS_INFO("我获得了所有物块的位置与最短边边长信息！！");
-	len = msg->data.size();
-	PosLen = Eigen::Map<Eigen::MatrixXd> (pos_len.data(), len / 3, 3);
+	// len = msg->data.size();
+	// PosLen = Eigen::Map<Eigen::MatrixXd> (pos_len.data(), 3, len / 3);
 }
 
 void ResultCallback(const std_msgs::UInt16::ConstPtr& msg) {
@@ -47,11 +48,24 @@ void ResultCallback(const std_msgs::UInt16::ConstPtr& msg) {
 }
 
 void PointCallback(const std_msgs::Float64MultiArray::ConstPtr& msg) {
-	int len;
+	// int len;
 	std::vector<double> pt_3D = msg->data;
-	ROS_INFO("I heard Result Point3D!  %f, %f, %f, %f, %f, %f, %d", pt_3D[0], pt_3D[1], pt_3D[2], pt_3D[3], pt_3D[4], pt_3D[5], msg->data.size());
-	len = msg->data.size();
-	Point3D = Eigen::Map<Eigen::MatrixXd> (&pt_3D[0], 3, len / 3);
+	for (auto it = pt_3D.begin(); it != pt_3D.end(); ++it) {
+        std::cout << *it << " "; // 输出当前元素值
+    }
+	std::cout << std::endl;
+	// ROS_INFO("I heard Result Point3D!  %f, %f, %f, %f, %f, %f, %d", pt_3D[0], pt_3D[1], pt_3D[2], pt_3D[3], pt_3D[4], pt_3D[5], msg->data.size());
+	if(!pt_3D.empty()) {
+		isempty = false;
+		len = msg->data.size();
+		Point3D = Eigen::Map<Eigen::MatrixXd> (&pt_3D[0], 4, len / 4);
+		std::cout << Point3D(0, 0) << " " << Point3D(1, 0) << " " << Point3D(2, 0) << " " << Point3D(3, 0) << std::endl; 
+		std::cout << Point3D(0, 1) << " " << Point3D(1, 1) << " " << Point3D(2, 1) << " " << Point3D(3, 1) << std::endl; 
+		std::cout << Point3D(0, 2) << " " << Point3D(1, 2) << " " << Point3D(2, 2) << " " << Point3D(3, 2) << std::endl; 
+	}
+	else {
+		isempty = true;
+	}
 }
 
 int main(int argc, char** argv) {
@@ -129,18 +143,27 @@ int main(int argc, char** argv) {
 						   0, 0, 0, 1;
 
 		//当获取到相机发布的位姿信息后，只需要将信息存储，当接收到分析结果时，开始进行轨迹规划并运动
-		if(flag) {
+		if(flag && !isempty) {
 			num++;
 			//结果是第i个物块
 			int i;
+			// std::cout << Point3D(3, i)
 			for (i = 0 ; i < 5 ; i++) {
-				if(result == fre[i])
+				std::cout << Point3D(3, i) << std::endl;
+				if(result == int(Point3D(3, i)))
 					break;
 			}
 			ROS_INFO("结果是第%d个物块", i+1);
-			if(i >= len / 3)
-				continue;
 
+			// 若识别出的结果频率编号大于当前物块数，说明结果错误，不进行本次抓取
+			std::cout << "i=" << i << std::endl;
+			std::cout << "len=" << len << std::endl;
+			if(i >= len / 4)	
+			{
+				flag = 0;
+				continue;
+			}
+			std::cout << "i=" << i << std::endl;
 			Eigen::Matrix<double, 4, 1>  Pt_TCL, Pt_Base;
 			// Pt_TCL是齐次坐标
 			Pt_TCL  << Point3D(0, i), Point3D(1, i), Point3D(2, i), 1.0;

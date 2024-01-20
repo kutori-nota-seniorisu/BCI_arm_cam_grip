@@ -266,6 +266,11 @@ target_link_libraries(testpic_pub
   /opt/ros/noetic/lib/libcv_bridge.so
 )
 
+add_executable(testeigen src/testeigen.cpp)
+target_link_libraries(testeigen
+    ${catkin_LIBRARIES}
+)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use

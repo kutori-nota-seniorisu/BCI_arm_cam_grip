@@ -693,6 +693,21 @@ bci_grip_generate_messages_cpp/fast:
 .PHONY : bci_grip_generate_messages_cpp/fast
 
 # Convenience name for target.
+bci_grip/CMakeFiles/testeigen.dir/rule:
+	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/testeigen.dir/rule
+.PHONY : bci_grip/CMakeFiles/testeigen.dir/rule
+
+# Convenience name for target.
+testeigen: bci_grip/CMakeFiles/testeigen.dir/rule
+
+.PHONY : testeigen
+
+# fast build rule for target.
+testeigen/fast:
+	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f bci_grip/CMakeFiles/testeigen.dir/build.make bci_grip/CMakeFiles/testeigen.dir/build
+.PHONY : testeigen/fast
+
+# Convenience name for target.
 bci_grip/CMakeFiles/industrial_msgs_generate_messages_cpp.dir/rule:
 	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f CMakeFiles/Makefile2 bci_grip/CMakeFiles/industrial_msgs_generate_messages_cpp.dir/rule
 .PHONY : bci_grip/CMakeFiles/industrial_msgs_generate_messages_cpp.dir/rule
@@ -1247,6 +1262,33 @@ src/test_realsense_show.cpp.s:
 	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f bci_grip/CMakeFiles/test_realsense_show.dir/build.make bci_grip/CMakeFiles/test_realsense_show.dir/src/test_realsense_show.cpp.s
 .PHONY : src/test_realsense_show.cpp.s
 
+src/testeigen.o: src/testeigen.cpp.o
+
+.PHONY : src/testeigen.o
+
+# target to build an object file
+src/testeigen.cpp.o:
+	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f bci_grip/CMakeFiles/testeigen.dir/build.make bci_grip/CMakeFiles/testeigen.dir/src/testeigen.cpp.o
+.PHONY : src/testeigen.cpp.o
+
+src/testeigen.i: src/testeigen.cpp.i
+
+.PHONY : src/testeigen.i
+
+# target to preprocess a source file
+src/testeigen.cpp.i:
+	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f bci_grip/CMakeFiles/testeigen.dir/build.make bci_grip/CMakeFiles/testeigen.dir/src/testeigen.cpp.i
+.PHONY : src/testeigen.cpp.i
+
+src/testeigen.s: src/testeigen.cpp.s
+
+.PHONY : src/testeigen.s
+
+# target to generate assembly for a file
+src/testeigen.cpp.s:
+	cd /home/sd/BCI_arm_cam_grip/build && $(MAKE) -f bci_grip/CMakeFiles/testeigen.dir/build.make bci_grip/CMakeFiles/testeigen.dir/src/testeigen.cpp.s
+.PHONY : src/testeigen.cpp.s
+
 src/testpic_pub.o: src/testpic_pub.cpp.o
 
 .PHONY : src/testpic_pub.o
@@ -1320,6 +1362,7 @@ help:
 	@echo "... control_toolbox_gencfg"
 	@echo "... shape_msgs_generate_messages_eus"
 	@echo "... bci_grip_generate_messages_cpp"
+	@echo "... testeigen"
 	@echo "... industrial_msgs_generate_messages_cpp"
 	@echo "... shape_msgs_generate_messages_lisp"
 	@echo "... bci_grip_generate_messages_py"
@@ -1365,6 +1408,9 @@ help:
 	@echo "... src/test_realsense_show.o"
 	@echo "... src/test_realsense_show.i"
 	@echo "... src/test_realsense_show.s"
+	@echo "... src/testeigen.o"
+	@echo "... src/testeigen.i"
+	@echo "... src/testeigen.s"
 	@echo "... src/testpic_pub.o"
 	@echo "... src/testpic_pub.i"
 	@echo "... src/testpic_pub.s"
