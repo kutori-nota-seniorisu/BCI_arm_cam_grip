@@ -77,6 +77,8 @@ y_ref = my_function.sincosref(
 	w_sincos)
 # 标志相机启动与否的变量，为 false 时未启动，为 true 时启动
 camera_on = False
+# 标志脑电数据是否可以接收的变量，为 true 时可以接收，为 false 时不可以接收。初始状态为 true
+receive_state = True
 
 # 用于分析的数据数组
 data_used = np.array([])
@@ -99,17 +101,21 @@ def callback_get_packet(data):
 	# 把一维数组转换成二维数组
 	rawdata = np.array(data.data[:]).reshape(512, 35).T
 	# 判断，是进行初始化，还是将数据拼接
-	global data_used, camera_on
+	global data_used, camera_on, receive_state
 	global res_arr
-	if data_used.size == 0:
-		data_used = rawdata
+	if receive_state == True:
+		print("receive EEG Data!")
+		if data_used.size == 0:
+			data_used = rawdata
+		else:
+			data_used = np.hstack((data_used, rawdata))
+			# 用作差的方式判断接收的数据包数量，每0.5s进入一次分析
+			delta = data_used.shape[1] - BUFFSIZE
+			if delta >= 0:
+				if delta % (anaInter * sampleRate) == 0:
+					data_used = data_used[:, -BUFFSIZE:]
 	else:
-		data_used = np.hstack((data_used, rawdata))
-		# 用作差的方式判断接收的数据包数量，每0.5s进入一次分析
-		delta = data_used.shape[1] - BUFFSIZE
-		if delta >= 0:
-			if delta % (anaInter * sampleRate) == 0:
-				data_used = data_used[:, -BUFFSIZE:]
+		print("EEG Data not received!")
 
 	if data_used.shape[1] == BUFFSIZE:
 		print("analysis start")
@@ -121,7 +127,7 @@ def callback_get_packet(data):
 		# the number of channels usd
 		channel_usedNum = len(ch_used)
 
-		# data pre-processing
+		# 数据预处理
 		# downsampling
 		data_downSample = signal.decimate(
 			data_chused, downSamplingNum, ftype='fir')
@@ -202,7 +208,7 @@ def callback_get_packet(data):
 			print("分析成功！！")
 			print("real result is", real_res)
 
-		if real_res == 15:
+		if real_res == 15 and camera_on == False:
 			# do something
 			print("相机启动频率为", real_res)
 			camera_state = Bool()
@@ -210,8 +216,11 @@ def callback_get_packet(data):
 			camera_state.data = camera_on
 			state_result_pub.publish(camera_state)
 			camera_on_pub.publish(camera_state)
-			# time.sleep(0.5)
-			# print("延时0.5")
+
+			# 将当前脑电数据清零
+			# 这个可以放入回调函数里执行吗吗吗？？？
+			data_used = np.array([])
+
 		if camera_on and real_res != 0 and real_res != 15:
 			print("本次实验结果为", real_res)
 			res_pub = UInt16()
@@ -220,6 +229,16 @@ def callback_get_packet(data):
 
 		print("analysis finish\n")
 
+def callback_start_grip(data):
+	# 当机械臂开始运动抓取物块时，发送信号到分析节点。分析节点清空脑电数据，并拒绝接收新的数据
+	global receive_state, data_used
+	data_used = np.array([])
+	receive_state = False
+
+def callback_end_grip(data):
+	# 当机械臂抓取物块结束后，发送信号到分析节点。分析节点开始接收数据
+	global receive_state
+	receive_state = True
 
 def listener():
 	# In ROS, nodes are uniquely named. If two nodes with the same
